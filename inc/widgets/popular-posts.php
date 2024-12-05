@@ -2,7 +2,7 @@
 class NSC_Blog_Popular_Posts extends WP_Widget {
 	public function __construct() {
     parent::__construct(
-			'nsc-blog-popular-posts',
+			'rj-bst-popular-posts',
 			'NSC Popular Posts'
 		);
 		add_action( 'widgets_init', function() {
@@ -29,7 +29,7 @@ class NSC_Blog_Popular_Posts extends WP_Widget {
 			$after_title = $args['after_title'];
 
 			printf(
-		    __('%1$s %2$s <a href="%3$s" title="%4$s">%4$s </a> %5$s', 'nsc-blog' ),
+		    __('%1$s %2$s <a href="%3$s" title="%4$s">%4$s </a> %5$s', 'rj-bst' ),
 				$before_title,
 		    $title,
 				$view_all_cat_url,
@@ -38,7 +38,7 @@ class NSC_Blog_Popular_Posts extends WP_Widget {
 			);
 		}
 
-		$posts_per_page  = ! empty( $instance['posts_per_page'] ) ? $instance['posts_per_page'] : esc_html__( '5', 'nsc-blog' );
+		$posts_per_page  = ! empty( $instance['posts_per_page'] ) ? $instance['posts_per_page'] : esc_html__( '5', 'rj-bst' );
 
 
    // the query
@@ -99,25 +99,25 @@ class NSC_Blog_Popular_Posts extends WP_Widget {
 	}
 
 	public function form( $instance ) {
-    $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'nsc-blog' );
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'rj-bst' );
 
-		$view_all_cat_text  = ! empty( $instance['view_all_cat_text'] ) ? $instance['view_all_cat_text'] : esc_html__( '', 'nsc-blog' );
-		$view_all_cat_url  = ! empty( $instance['view_all_cat_url'] ) ? $instance['view_all_cat_url'] : esc_html__( '', 'nsc-blog' );
-		$posts_per_page  = ! empty( $instance['posts_per_page'] ) ? $instance['posts_per_page'] : esc_html__( '', 'nsc-blog' );
+		$view_all_cat_text  = ! empty( $instance['view_all_cat_text'] ) ? $instance['view_all_cat_text'] : esc_html__( '', 'rj-bst' );
+		$view_all_cat_url  = ! empty( $instance['view_all_cat_url'] ) ? $instance['view_all_cat_url'] : esc_html__( '', 'rj-bst' );
+		$posts_per_page  = ! empty( $instance['posts_per_page'] ) ? $instance['posts_per_page'] : esc_html__( '', 'rj-bst' );
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'rj-bst' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'View All Button' ) ); ?>"><?php echo esc_html__( 'View All Button:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'View All Button' ) ); ?>"><?php echo esc_html__( 'View All Button:', 'rj-bst' ); ?></label>
 			<input class="" id="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'view_all_cat_text' ) ); ?>" value="<?php echo esc_attr( $view_all_cat_text ); ?>" type="text">
 			<input class="" id="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'view_all_cat_url' ) ); ?>" value="<?php echo esc_attr( $view_all_cat_url ); ?>" type="text">
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'Number of posts to show:' ) ); ?>"><?php echo esc_html__( 'Number of posts to show:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'Number of posts to show:' ) ); ?>"><?php echo esc_html__( 'Number of posts to show:', 'rj-bst' ); ?></label>
       <input class="" id="<?php echo esc_attr( $this->get_field_id( 'posts_per_page' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'posts_per_page' ) ); ?>" value="<?php echo esc_attr( $posts_per_page ); ?>" type="number">
 		</p>
 		<?php

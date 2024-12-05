@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
  get_header();
@@ -54,7 +54,7 @@
          if(get_theme_mod('nsc_blog_category_name', true) != '0'){
          echo ($headh1 == 0) ? '<h1 class="nsc-cat-head">' : '<h2 class="nsc-cat-head">';
             if (!is_date()) {
-              echo esc_html($category->name, 'nsc-blog');
+              echo esc_html($category->name, 'rj-bst');
             }else {
               echo esc_html(get_the_date('Y'));
             }
@@ -66,9 +66,9 @@
           if(get_theme_mod('nsc_blog_category_post_count', true) != '0'){ ?>
             <p class="nsc-cat-count">
               <?php if (!is_date()) {
-                echo esc_html($category->count . " Articles", 'nsc-blog');
+                echo esc_html($category->count . " Articles", 'rj-bst');
               }else {
-                 echo esc_html($post_count . " Articles", 'nsc-blog');
+                 echo esc_html($post_count . " Articles", 'rj-bst');
               } ?>
             </p>
         <?php } ?>
@@ -80,7 +80,7 @@
   <div class="container">
     <div class="row">
       <div class="<?php echo esc_attr($col8); ?> nsc-all-articles">
-        <div class="nsc-blog-post-grid">
+        <div class="rj-bst-post-grid">
         <?php if ( have_posts() ) :
           while ( have_posts() ) : the_post(); ?>
           <div class="post-container">
@@ -141,7 +141,7 @@
                </div>
 
                <a href="<?php echo get_the_permalink(); ?>" class="read-more-btn">
-                 <?php echo esc_html__('Read More', 'nsc-blog'); ?>
+                 <?php echo esc_html__('Read More', 'rj-bst'); ?>
                  <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5.05089C0.5 4.76592 0.731012 4.53491 1.01598 4.53491L13.4 4.53491C13.685 4.53491 13.916 4.76592 13.916 5.05089C13.916 5.33586 13.685 5.56687 13.4 5.56687L1.01598 5.56687C0.731012 5.56687 0.5 5.33586 0.5 5.05089Z" fill="url(#paint0_linear_268_2268)"/>
                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3175 0.526839C10.5364 0.344403 10.8618 0.373975 11.0442 0.59289L14.3007 4.50052C14.5665 4.81944 14.5665 5.2827 14.3007 5.60162L11.0442 9.50924C10.8618 9.72816 10.5364 9.75773 10.3175 9.5753C10.0986 9.39286 10.069 9.0675 10.2514 8.84858L13.4162 5.05107L10.2514 1.25355C10.069 1.03464 10.0986 0.709276 10.3175 0.526839Z" fill="url(#paint1_linear_268_2268)"/>

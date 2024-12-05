@@ -12,7 +12,7 @@ function nsc_blog_customizer_register( $wp_customize ){
 		'sanitize_callback' => 'nsc_blog_toggle_sanitization'
 	));
 	$wp_customize->add_control( new NSC_BLOG_TOGGLE_SWITCH_CUSTOM_CONTROL( $wp_customize, 'nsc_blog_site_title',array(
-		'label' => esc_html__( 'Show / Hide Title','nsc-blog' ),
+		'label' => esc_html__( 'Show / Hide Title','rj-bst' ),
 		'section' => 'title_tagline'
 	)));
 
@@ -22,7 +22,7 @@ function nsc_blog_customizer_register( $wp_customize ){
 		'sanitize_callback' => 'nsc_blog_toggle_sanitization'
 	));
 	$wp_customize->add_control( new NSC_BLOG_TOGGLE_SWITCH_CUSTOM_CONTROL( $wp_customize, 'nsc_blog_site_description',array(
-		'label' => esc_html__( 'Show / Hide Description','nsc-blog' ),
+		'label' => esc_html__( 'Show / Hide Description','rj-bst' ),
 		'section' => 'title_tagline'
 	)));
 
@@ -32,7 +32,7 @@ function nsc_blog_customizer_register( $wp_customize ){
 		'sanitize_callback' => 'nsc_blog_toggle_sanitization'
 	));
 	$wp_customize->add_control( new NSC_BLOG_TOGGLE_SWITCH_CUSTOM_CONTROL( $wp_customize, 'nsc_blog_site_content_aside',array(
-		'label' => esc_html__( 'Show Title Beside the Logo ','nsc-blog' ),
+		'label' => esc_html__( 'Show Title Beside the Logo ','rj-bst' ),
 		'section' => 'title_tagline'
 	)));
 
@@ -52,13 +52,13 @@ function nsc_blog_customizer_register( $wp_customize ){
 $wp_customize->add_panel( 'rj_bst_leo_homepage_panel', array(
 	'capability' => 'edit_theme_options',
 	'theme_supports' => '',
-	'title' => esc_html__( 'Homepage Setting', 'nsc-blog' ),
+	'title' => esc_html__( 'Homepage Setting', 'rj-bst' ),
 	'priority' => 10,
 ));
 
 // slider setting
  $wp_customize->add_section('rj_bst_leo_slider_section' , array(
-	'title' => __( 'Slider Section', 'nsc-blog' ),
+	'title' => __( 'Slider Section', 'rj-bst' ),
 	'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
@@ -68,18 +68,28 @@ $wp_customize->add_setting('rj_bst_leo_slider_bg1', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'rj_bst_leo_slider_bg1', array(
-	'label'    => __('Slide 1 Background Image', 'nsc-blog'),
+	'label'    => __('Slide 1 Background Image', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'settings' => 'rj_bst_leo_slider_bg1',
 )));
 
 // Setting for Slide 1 Title
+// $wp_customize->add_setting('rj_bst_leo_slider_title1', array(
+// 	'default'   => 'Vending Products <span>in all Offices and Hubs</span>',
+// 	'transport' => 'refresh',
+// ));
+// $wp_customize->add_control('rj_bst_leo_slider_title1', array(
+// 	'label'    => __('Slide 1 Title', 'rj-bst'),
+// 	'section'  => 'rj_bst_leo_slider_section',
+// 	'type'     => 'text',
+// ));
+
 $wp_customize->add_setting('rj_bst_leo_slider_title1', array(
-	'default'   => 'Vending Products <span>in all Offices and Hubs</span>',
-	'transport' => 'refresh',
+	'default'           => 'Vending Products <span>in all Offices and Hubs</span>',
+	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_title1', array(
-	'label'    => __('Slide 1 Title', 'nsc-blog'),
+	'label'    => __('Slide 1 Title', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'text',
 ));
@@ -90,7 +100,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_desc1', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_desc1', array(
-	'label'    => __('Slide 1 Description', 'nsc-blog'),
+	'label'    => __('Slide 1 Description', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'textarea',
 ));
@@ -101,7 +111,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_bg2', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'rj_bst_leo_slider_bg2', array(
-	'label'    => __('Slide 2 Background Image', 'nsc-blog'),
+	'label'    => __('Slide 2 Background Image', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'settings' => 'rj_bst_leo_slider_bg2',
 )));
@@ -112,7 +122,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_title2', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_title2', array(
-	'label'    => __('Slide 2 Title', 'nsc-blog'),
+	'label'    => __('Slide 2 Title', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'text',
 ));
@@ -123,7 +133,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_desc2', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_desc2', array(
-	'label'    => __('Slide 2 Description', 'nsc-blog'),
+	'label'    => __('Slide 2 Description', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'textarea',
 ));
@@ -134,7 +144,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_bg3', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'rj_bst_leo_slider_bg3', array(
-	'label'    => __('Slide 3 Background Image', 'nsc-blog'),
+	'label'    => __('Slide 3 Background Image', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'settings' => 'rj_bst_leo_slider_bg3',
 )));
@@ -145,7 +155,7 @@ $wp_customize->add_setting('rj_bst_leo_slider_title3', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_title3', array(
-	'label'    => __('Slide 3 Title', 'nsc-blog'),
+	'label'    => __('Slide 3 Title', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'text',
 ));
@@ -156,14 +166,14 @@ $wp_customize->add_setting('rj_bst_leo_slider_desc3', array(
 	'transport' => 'refresh',
 ));
 $wp_customize->add_control('rj_bst_leo_slider_desc3', array(
-	'label'    => __('Slide 3 Description', 'nsc-blog'),
+	'label'    => __('Slide 3 Description', 'rj-bst'),
 	'section'  => 'rj_bst_leo_slider_section',
 	'type'     => 'textarea',
 ));
 
  // Section: About Us Section
 $wp_customize->add_section('rj_bst_leo_about_section' , array(
-'title' => __( 'About Us Section', 'nsc-blog' ),
+'title' => __( 'About Us Section', 'rj-bst' ),
 'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
@@ -173,7 +183,7 @@ $wp_customize->add_setting('rj_bst_leo_about_subtitle', array(
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_about_subtitle', array(
-	'label'    => __('Subtitle', 'nsc-blog'),
+	'label'    => __('Subtitle', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'text',
 ));
@@ -184,7 +194,7 @@ $wp_customize->add_setting('rj_bst_leo_about_title', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_title', array(
-	'label'    => __('Title', 'nsc-blog'),
+	'label'    => __('Title', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -195,7 +205,7 @@ $wp_customize->add_setting('rj_bst_leo_about_content1', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_content1', array(
-	'label'    => __('Content', 'nsc-blog'),
+	'label'    => __('Content', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -206,7 +216,7 @@ $wp_customize->add_setting('rj_bst_leo_about_content2', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_content2', array(
-	'label'    => __('Content', 'nsc-blog'),
+	'label'    => __('Content', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -217,7 +227,7 @@ $wp_customize->add_setting('rj_bst_leo_about_content3', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_content3', array(
-	'label'    => __('Content', 'nsc-blog'),
+	'label'    => __('Content', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -228,7 +238,7 @@ $wp_customize->add_setting('rj_bst_leo_about_content4', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_content4', array(
-	'label'    => __('Content', 'nsc-blog'),
+	'label'    => __('Content', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -239,7 +249,7 @@ $wp_customize->add_setting('rj_bst_leo_about_content5', array(
 	'sanitize_callback' => 'wp_kses_post',
 ));
 $wp_customize->add_control('rj_bst_leo_about_content5', array(
-	'label'    => __('Content', 'nsc-blog'),
+	'label'    => __('Content', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'textarea',
 ));
@@ -250,7 +260,7 @@ $wp_customize->add_setting('rj_bst_leo_about_button_text', array(
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_about_button_text', array(
-	'label'    => __('Button Text', 'nsc-blog'),
+	'label'    => __('Button Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'text',
 ));
@@ -261,7 +271,7 @@ $wp_customize->add_setting('rj_bst_leo_about_button_url', array(
 	'sanitize_callback' => 'esc_url_raw',
 ));
 $wp_customize->add_control('rj_bst_leo_about_button_url', array(
-	'label'    => __('Button URL', 'nsc-blog'),
+	'label'    => __('Button URL', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'url',
 ));
@@ -276,7 +286,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'rj_bst_leo_about_bg_image',
 		array(
-			'label'    => __('Background Image', 'nsc-blog'),
+			'label'    => __('Background Image', 'rj-bst'),
 			'section'  => 'rj_bst_leo_about_section',
 			'settings' => 'rj_bst_leo_about_bg_image',
 		)
@@ -291,7 +301,7 @@ $wp_customize->add_setting('rj_bst_leo_about_us_image', array(
 
 // Add the image upload control
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'rj_bst_leo_about_us_image', array(
-	'label'    => __('About Us Image', 'nsc-blog'),
+	'label'    => __('About Us Image', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'settings' => 'rj_bst_leo_about_us_image',
 )));
@@ -303,7 +313,7 @@ $wp_customize->add_setting('rj_bst_leo_counter_text1', array(
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_counter_text1', array(
-	'label'    => __('Counter Text', 'nsc-blog'),
+	'label'    => __('Counter Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'text',
 ));
@@ -313,7 +323,7 @@ $wp_customize->add_setting('rj_bst_leo_counter_text2', array(
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_counter_text2', array(
-	'label'    => __('Counter Text', 'nsc-blog'),
+	'label'    => __('Counter Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_about_section',
 	'type'     => 'text',
 ));
@@ -321,7 +331,7 @@ $wp_customize->add_control('rj_bst_leo_counter_text2', array(
 // key facts
 
 $wp_customize->add_section('rj_bst_leo_facts_section', array(
-	'title' => __( 'Facts Section', 'nsc-blog' ),
+	'title' => __( 'Facts Section', 'rj-bst' ),
 	'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
@@ -331,22 +341,22 @@ $wp_customize->add_setting('rj_bst_leo_facts_highlighted_text', array('default' 
 $wp_customize->add_setting('rj_bst_leo_facts_content', array('default' => 'Coming Soon.....'));
 
 $wp_customize->add_control('rj_bst_leo_facts_subtitle', array(
-	'label' => __('Subtitle', 'nsc-blog'),
+	'label' => __('Subtitle', 'rj-bst'),
 	'section' => 'rj_bst_leo_facts_section',
 	'type' => 'text',
 ));
 $wp_customize->add_control('rj_bst_leo_facts_title', array(
-	'label' => __('Title', 'nsc-blog'),
+	'label' => __('Title', 'rj-bst'),
 	'section' => 'rj_bst_leo_facts_section',
 	'type' => 'text',
 ));
 $wp_customize->add_control('rj_bst_leo_facts_highlighted_text', array(
-	'label' => __('Highlighted Text', 'nsc-blog'),
+	'label' => __('Highlighted Text', 'rj-bst'),
 	'section' => 'rj_bst_leo_facts_section',
 	'type' => 'text',
 ));
 $wp_customize->add_control('rj_bst_leo_facts_content', array(
-	'label' => __('Content', 'nsc-blog'),
+	'label' => __('Content', 'rj-bst'),
 	'section' => 'rj_bst_leo_facts_section',
 	'type' => 'textarea',
 ));
@@ -354,26 +364,26 @@ $wp_customize->add_control('rj_bst_leo_facts_content', array(
 // testimonial
 
 $wp_customize->add_section('rj_bst_leo_testimonial_section', array(
-	'title' => __( 'Testimonial Section', 'nsc-blog' ),
+	'title' => __( 'Testimonial Section', 'rj-bst' ),
 	'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
 $wp_customize->add_setting('rj_bst_leo_testimonial_title', array(
-	'default'           => __('Testimonial', 'nsc-blog'),
+	'default'           => __('Testimonial', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_textarea_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_title', array(
-	'label'    => __('Title', 'nsc-blog'),
+	'label'    => __('Title', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'textarea',
 ));
 
 $wp_customize->add_setting('rj_bst_leo_testimonial_content', array(
-	'default'           => __('People Say About Vend', 'nsc-blog'),
+	'default'           => __('People Say About Vend', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_textarea_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_content', array(
-	'label'    => __('Text', 'nsc-blog'),
+	'label'    => __('Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'textarea',
 ));
@@ -381,66 +391,66 @@ $wp_customize->add_control('rj_bst_leo_testimonial_content', array(
 
 // Testimonial 1: Text
 $wp_customize->add_setting('rj_bst_leo_testimonial_1_text', array(
-	'default'           => __('Testimonial 1 content goes here.Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'nsc-blog'),
+	'default'           => __('Testimonial 1 content goes here.Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_textarea_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_1_text', array(
-	'label'    => __('Testimonial 1 Text', 'nsc-blog'),
+	'label'    => __('Testimonial 1 Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'textarea',
 ));
 
 // Testimonial 1: Author
 $wp_customize->add_setting('rj_bst_leo_testimonial_1_author', array(
-	'default'           => __('Sam Peters, Vending Corp LLC', 'nsc-blog'),
+	'default'           => __('Sam Peters, Vending Corp LLC', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_1_author', array(
-	'label'    => __('Testimonial 1 Author', 'nsc-blog'),
+	'label'    => __('Testimonial 1 Author', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'text',
 ));
 
 // Testimonial 2: Text
 $wp_customize->add_setting('rj_bst_leo_testimonial_2_text', array(
-	'default'           => __('	2 Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'nsc-blog'),
+	'default'           => __('	2 Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_textarea_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_2_text', array(
-	'label'    => __('Testimonial 2 Text', 'nsc-blog'),
+	'label'    => __('Testimonial 2 Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'textarea',
 ));
 
 // Testimonial 2: Author
 $wp_customize->add_setting('rj_bst_leo_testimonial_2_author', array(
-	'default'           => __('Lauren Golf, Programmer', 'nsc-blog'),
+	'default'           => __('Lauren Golf, Programmer', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_2_author', array(
-	'label'    => __('Testimonial 2 Author', 'nsc-blog'),
+	'label'    => __('Testimonial 2 Author', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'text',
 ));
 
 // Testimonial 3: Text
 $wp_customize->add_setting('rj_bst_leo_testimonial_3_text', array(
-	'default'           => __('3 Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'nsc-blog'),
+	'default'           => __('3 Sturgeon medusafish tompot blenny burma danio loach catfish lanternfish wrasse goldeye whiptail gulper coffinfish Black pickerel hardhead catfish. Stoneroller minnow skipjack tuna. Black pickerel shrimpfish marine hatchetfish sillago dottyback spiny basslet.', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_textarea_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_3_text', array(
-	'label'    => __('Testimonial 3 Text', 'nsc-blog'),
+	'label'    => __('Testimonial 3 Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'textarea',
 ));
 
 // Testimonial 3: Author
 $wp_customize->add_setting('rj_bst_leo_testimonial_3_author', array(
-	'default'           => __('Lauren Golf, Programmer', 'nsc-blog'),
+	'default'           => __('Lauren Golf, Programmer', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_testimonial_3_author', array(
-	'label'    => __('Testimonial 3 Author', 'nsc-blog'),
+	'label'    => __('Testimonial 3 Author', 'rj-bst'),
 	'section'  => 'rj_bst_leo_testimonial_section',
 	'type'     => 'text',
 ));
@@ -449,27 +459,27 @@ $wp_customize->add_control('rj_bst_leo_testimonial_3_author', array(
 
 // Section for Brand Logos
 $wp_customize->add_section('rj_bst_leo_brand_logos_section', array(
-	'title' => __( 'Brand Logos', 'nsc-blog' ),
+	'title' => __( 'Brand Logos', 'rj-bst' ),
 	'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
 $wp_customize->add_setting('rj_bst_leo_brand_logos_text', array(
-	'default'           => __('Partners', 'nsc-blog'),
+	'default'           => __('Partners', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_brand_logos_text', array(
-	'label'    => __('Brand Logo Text', 'nsc-blog'),
+	'label'    => __('Brand Logo Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_brand_logos_section',
 	'type'     => 'text',
 ));
 
 
 $wp_customize->add_setting('rj_bst_leo_brand_logos_text1', array(
-	'default'           => __('People Who Trust Us', 'nsc-blog'),
+	'default'           => __('People Who Trust Us', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_brand_logos_text1', array(
-	'label'    => __('Brand Logos', 'nsc-blog'),
+	'label'    => __('Brand Logos', 'rj-bst'),
 	'section'  => 'rj_bst_leo_brand_logos_section',
 	'type'     => 'text',
 ));
@@ -481,21 +491,21 @@ $wp_customize->add_setting('rj_bst_leo_brand_logo_count', array(
 ));
 
 $wp_customize->add_control('rj_bst_leo_brand_logo_count', array(
-	'label'    => __('Number of Brand Logos', 'nsc-blog'),
+	'label'    => __('Number of Brand Logos', 'rj-bst'),
 	'section'  => 'rj_bst_leo_brand_logos_section',
 	'settings' => 'rj_bst_leo_brand_logo_count',
 	'type'     => 'select',
-	'choices'  => array_combine(range(1, 10), range(1, 10)), 
+	'choices'  => array_combine(range(1, 20), range(1, 20)), 
 ));
 
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= 19; $i++) {
 	$wp_customize->add_setting("rj_bst_leo_brand_logo_$i", array(
 		'default'           => '',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "rj_bst_leo_brand_logo_$i", array(
-		'label'    => __("Brand Logo $i", 'nsc-blog'),
+		'label'    => __("Brand Logo $i", 'rj-bst'),
 		'section'  => 'rj_bst_leo_brand_logos_section',
 		'settings' => "rj_bst_leo_brand_logo_$i",
 		'active_callback'   => function () use ($i) {
@@ -507,27 +517,27 @@ for ($i = 1; $i <= 10; $i++) {
 
 // Add FAQ section
 $wp_customize->add_section('rj_bst_leo_faq_section', array(
-	'title' => __( 'FAQ Section', 'nsc-blog' ),
+	'title' => __( 'FAQ Section', 'rj-bst' ),
 	'panel' => 'rj_bst_leo_homepage_panel'
 ) );
 
 $wp_customize->add_setting('rj_bst_leo_brand_faq_text', array(
-	'default'           => __('Partners', 'nsc-blog'),
+	'default'           => __('Partners', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_brand_faq_text', array(
-	'label'    => __('Brand Logo Text', 'nsc-blog'),
+	'label'    => __('Brand Logo Text', 'rj-bst'),
 	'section'  => 'rj_bst_leo_faq_section',
 	'type'     => 'text',
 ));
 
 
 $wp_customize->add_setting('rj_bst_leo_brand_faq_text1', array(
-	'default'           => __('People Who Trust Us', 'nsc-blog'),
+	'default'           => __('People Who Trust Us', 'rj-bst'),
 	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control('rj_bst_leo_brand_faq_text1', array(
-	'label'    => __('Brand Logos', 'nsc-blog'),
+	'label'    => __('Brand Logos', 'rj-bst'),
 	'section'  => 'rj_bst_leo_faq_section',
 	'type'     => 'text',
 ));
@@ -539,7 +549,7 @@ $wp_customize->add_setting( 'rj_bst_leo_faq_number', array(
 ) );
 
 $wp_customize->add_control( 'rj_bst_leo_faq_number', array(
-	'label'   => __( 'Number of FAQ Items', 'nsc-blog' ),
+	'label'   => __( 'Number of FAQ Items', 'rj-bst' ),
 	'section' => 'rj_bst_leo_faq_section',
 	'type'    => 'number',
 	'input_attrs' => array(
@@ -560,12 +570,12 @@ for ( $i = 1; $i <= 5; $i++ ) {
 	) );
 
 	$wp_customize->add_control( "rj_bst_leo_faq_question_$i", array(
-		'label'   => __( "FAQ Question $i", 'nsc-blog' ),
+		'label'   => __( "FAQ Question $i", 'rj-bst' ),
 		'section' => 'rj_bst_leo_faq_section',
 		'type'    => 'text',
 	) );
 	$wp_customize->add_control( "rj_bst_leo_faq_answer_$i", array(
-		'label'   => __( "FAQ Answer $i", 'nsc-blog' ),
+		'label'   => __( "FAQ Answer $i", 'rj-bst' ),
 		'section' => 'rj_bst_leo_faq_section',
 		'type'    => 'textarea',
 	) );
@@ -698,7 +708,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 
   // Topbar START
   $wp_customize->add_section('nsc_blog_topabr' , array(
-    'title' => __( 'Topbar', 'nsc-blog' ),
+    'title' => __( 'Topbar', 'rj-bst' ),
     'panel' => 'nsc_blog_add_panel'
   ) );
 
@@ -709,7 +719,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 	));
 	$wp_customize->add_control('nsc_blog_topbar_menu',array(
 		'type' => 'select',
-		'label' => __('Select the Menu','nsc-blog'),
+		'label' => __('Select the Menu','rj-bst'),
 		'section' => 'nsc_blog_topabr',
 		'choices' 	=> $menu_list,
 	));
@@ -719,7 +729,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_topbar_icon_number',array(
-		'label'	=> esc_html__('Number of icons to show','nsc-blog'),
+		'label'	=> esc_html__('Number of icons to show','rj-bst'),
 		'section'=> 'nsc_blog_topabr',
 		'type'=> 'number'
 	));
@@ -739,7 +749,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 	// ));
 
 	  $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'nsc_blog_topbar_icon_separator'.$i,array(
-			'label' => esc_html__( 'Icon '.($i + 1),'nsc-blog' ),
+			'label' => esc_html__( 'Icon '.($i + 1),'rj-bst' ),
 			'section' => 'nsc_blog_topabr'
 	  )));
 
@@ -748,8 +758,8 @@ for ( $i = 1; $i <= 5; $i++ ) {
 			// 'sanitize_callback'	=> 'sanitize_text_field'
 		));
 		$wp_customize->add_control('nsc_blog_topbar_icon'.$i,array(
-			'label'	=> esc_html__('Icon Svg Code','nsc-blog'),
-			'description' => __( 'Add the svg code', 'nsc-blog' ),
+			'label'	=> esc_html__('Icon Svg Code','rj-bst'),
+			'description' => __( 'Add the svg code', 'rj-bst' ),
 			'section'=> 'nsc_blog_topabr',
 			'type'=> 'textarea'
 		));
@@ -759,7 +769,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 			'sanitize_callback'	=> 'sanitize_text_field'
 		));
 		$wp_customize->add_control('nsc_blog_topbar_icon_url'.$i,array(
-			'label'	=> esc_html__('Url','nsc-blog'),
+			'label'	=> esc_html__('Url','rj-bst'),
 			'section'=> 'nsc_blog_topabr',
 			'type'=> 'text'
 		));
@@ -769,8 +779,8 @@ for ( $i = 1; $i <= 5; $i++ ) {
 			'sanitize_callback'	=> 'sanitize_text_field'
 		));
 		$wp_customize->add_control('nsc_blog_topbar_icon_title'.$i,array(
-			'label'	=> esc_html__('Title','nsc-blog'),
-			'description' => __( 'Add the title for the SEO purpose', 'nsc-blog' ),
+			'label'	=> esc_html__('Title','rj-bst'),
+			'description' => __( 'Add the title for the SEO purpose', 'rj-bst' ),
 			'section'=> 'nsc_blog_topabr',
 			'type'=> 'text'
 		));
@@ -780,7 +790,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 
 	//  news scroller
 	$wp_customize->add_section('nsc_blog_news_scroller' , array(
-    'title' => __( 'News Scroll Bar', 'nsc-blog' ),
+    'title' => __( 'News Scroll Bar', 'rj-bst' ),
     'panel' => 'nsc_blog_add_panel'
   ) );
 
@@ -789,7 +799,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_news_ribbon_heading',array(
-		'label'	=> esc_html__('Text','nsc-blog'),
+		'label'	=> esc_html__('Text','rj-bst'),
 		'section'=> 'nsc_blog_news_scroller',
 		'type'=> 'text'
 	));
@@ -799,14 +809,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_news_ribbon_post_num',array(
-		'label'	=> esc_html__('Number of post','nsc-blog'),
+		'label'	=> esc_html__('Number of post','rj-bst'),
 		'section'=> 'nsc_blog_news_scroller',
 		'type'=> 'number'
 	));
 
 	//  slider
 	$wp_customize->add_section('nsc_blog_news_slider' , array(
-    'title' => __( 'Slider', 'nsc-blog' ),
+    'title' => __( 'Slider', 'rj-bst' ),
     'panel' => 'nsc_blog_add_panel'
   ) );
 
@@ -815,14 +825,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_slider_post_num',array(
-		'label'	=> esc_html__('Number Of Slider To Show','nsc-blog'),
+		'label'	=> esc_html__('Number Of Slider To Show','rj-bst'),
 		'section'=> 'nsc_blog_news_slider',
 		'type'=> 'number'
 	));
 
 	// Categories section
 	$wp_customize->add_section('nsc_blog_post_categories' , array(
-		'title' => __( 'Category', 'nsc-blog' ),
+		'title' => __( 'Category', 'rj-bst' ),
 		'panel' => 'nsc_blog_add_panel'
 	) );
 
@@ -831,7 +841,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_category_heading',array(
-		'label'	=> esc_html__('Category Heading','nsc-blog'),
+		'label'	=> esc_html__('Category Heading','rj-bst'),
 		'section'=> 'nsc_blog_post_categories',
 		'type'=> 'text'
 	));
@@ -841,7 +851,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_category_see_more',array(
-		'label'	=> esc_html__('See More','nsc-blog'),
+		'label'	=> esc_html__('See More','rj-bst'),
 		'section'=> 'nsc_blog_post_categories',
 		'type'=> 'text'
 	));
@@ -851,7 +861,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 	// 	'sanitize_callback'	=> 'sanitize_text_field'
 	// ));
 	// $wp_customize->add_control('nsc_blog_category_see_more_url',array(
-	// 	'label'	=> esc_html__('See More Url','nsc-blog'),
+	// 	'label'	=> esc_html__('See More Url','rj-bst'),
 	// 	'section'=> 'nsc_blog_post_categories',
 	// 	'type'=> 'text'
 	// ));
@@ -861,7 +871,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_category_cat_num',array(
-		'label'	=> esc_html__('Number of tabs to show','nsc-blog'),
+		'label'	=> esc_html__('Number of tabs to show','rj-bst'),
 		'section'=> 'nsc_blog_post_categories',
 		'type'=> 'number'
 	));
@@ -871,14 +881,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_category_view_more',array(
-		'label'	=> esc_html__('Number of tabs to show','nsc-blog'),
+		'label'	=> esc_html__('Number of tabs to show','rj-bst'),
 		'section'=> 'nsc_blog_post_categories',
 		'type'=> 'text'
 	));
 
 	// other artilces
 	$wp_customize->add_section('nsc_blog_other_articles' , array(
-		'title' => __( 'Other Articles', 'nsc-blog' ),
+		'title' => __( 'Other Articles', 'rj-bst' ),
 		'panel' => 'nsc_blog_add_panel'
 	) );
 
@@ -887,14 +897,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_other_articles_heading',array(
-		'label'	=> esc_html__('Other Articles','nsc-blog'),
+		'label'	=> esc_html__('Other Articles','rj-bst'),
 		'section'=> 'nsc_blog_other_articles',
 		'type'=> 'text'
 	));
 
 	// 	comment policy
 	$wp_customize->add_section('nsc_blog_comment_policy' , array(
-		'title' => __( 'Comment Policy', 'nsc-blog' ),
+		'title' => __( 'Comment Policy', 'rj-bst' ),
 		'panel' => 'nsc_blog_add_panel'
 	) );
 
@@ -903,8 +913,8 @@ for ( $i = 1; $i <= 5; $i++ ) {
 	    'sanitize_callback' => 'esc_url_raw',
 	  ));
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'nsc_blog_comments_policy_bgimage',array(
-      'label' => __('Background Image ','nsc-blog'),
-      'description' => __('Dimension (1600px * 700px)','nsc-blog'),
+      'label' => __('Background Image ','rj-bst'),
+      'description' => __('Dimension (1600px * 700px)','rj-bst'),
       'section' => 'nsc_blog_comment_policy',
       'settings' => 'nsc_blog_comments_policy_bgimage'
   )));
@@ -914,7 +924,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_comment_policy_heading',array(
-		'label'	=> esc_html__('Heading','nsc-blog'),
+		'label'	=> esc_html__('Heading','rj-bst'),
 		'section'=> 'nsc_blog_comment_policy',
 		'type'=> 'text'
 	));
@@ -924,7 +934,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_comment_policy_para',array(
-		'label'	=> esc_html__('Description','nsc-blog'),
+		'label'	=> esc_html__('Description','rj-bst'),
 		'section'=> 'nsc_blog_comment_policy',
 		'type'=> 'textarea'
 	));
@@ -934,7 +944,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_comment_policy_btn',array(
-		'label'	=> esc_html__('Button','nsc-blog'),
+		'label'	=> esc_html__('Button','rj-bst'),
 		'section'=> 'nsc_blog_comment_policy',
 		'type'=> 'text'
 	));
@@ -944,14 +954,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_comment_policy_btn_url',array(
-		'label'	=> esc_html__('Button Url','nsc-blog'),
+		'label'	=> esc_html__('Button Url','rj-bst'),
 		'section'=> 'nsc_blog_comment_policy',
 		'type'=> 'text'
 	));
 
 	//  also on aviationist
 	$wp_customize->add_section('nsc_blog_also_on_aviationist' , array(
-		'title' => __( 'Also on aviationist', 'nsc-blog' ),
+		'title' => __( 'Also on aviationist', 'rj-bst' ),
 		'panel' => 'nsc_blog_add_panel'
 	) );
 	$wp_customize->add_setting('nsc_blog_also_on_aviationist_heading',array(
@@ -959,7 +969,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_also_on_aviationist_heading',array(
-		'label'	=> esc_html__('Heading','nsc-blog'),
+		'label'	=> esc_html__('Heading','rj-bst'),
 		'section'=> 'nsc_blog_also_on_aviationist',
 		'type'=> 'text'
 	));
@@ -968,7 +978,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_also_on_aviationist_post_num',array(
-		'label'	=> esc_html__('Number of post to show','nsc-blog'),
+		'label'	=> esc_html__('Number of post to show','rj-bst'),
 		'section'=> 'nsc_blog_also_on_aviationist',
 		'type'=> 'text'
 	));
@@ -976,7 +986,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 
 	//  contact us page
 	$wp_customize->add_section('nsc_blog_contact_us_page' , array(
-		'title' => __( 'Contact Us Page', 'nsc-blog' ),
+		'title' => __( 'Contact Us Page', 'rj-bst' ),
 		'panel' => 'nsc_blog_add_panel'
 	) );
 	$wp_customize->add_setting('nsc_blog_contact_us_description',array(
@@ -984,7 +994,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_description',array(
-		'label'	=> esc_html__('Page Description','nsc-blog'),
+		'label'	=> esc_html__('Page Description','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'textarea'
 	));
@@ -994,7 +1004,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_page_title',array(
-		'label'	=> esc_html__('Heading','nsc-blog'),
+		'label'	=> esc_html__('Heading','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));
@@ -1004,7 +1014,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_title_desc',array(
-		'label'	=> esc_html__('Heading Description','nsc-blog'),
+		'label'	=> esc_html__('Heading Description','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'textarea'
 	));
@@ -1014,7 +1024,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_form_title',array(
-		'label'	=> esc_html__('Form Heading','nsc-blog'),
+		'label'	=> esc_html__('Form Heading','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));
@@ -1024,7 +1034,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_form_description',array(
-		'label'	=> esc_html__('Form Description','nsc-blog'),
+		'label'	=> esc_html__('Form Description','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'textarea'
 	));
@@ -1034,7 +1044,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_form_shortcode',array(
-		'label'	=> esc_html__('Form Shortcode','nsc-blog'),
+		'label'	=> esc_html__('Form Shortcode','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));
@@ -1044,7 +1054,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 			'sanitize_callback' => 'esc_url_raw',
 		));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'nsc_blog_contact_us_image',array(
-			'label' => __('Image ','nsc-blog'),
+			'label' => __('Image ','rj-bst'),
 			'section' => 'nsc_blog_contact_us_page',
 			'settings' => 'nsc_blog_contact_us_image'
 	)));
@@ -1054,7 +1064,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_below_description',array(
-		'label'	=> esc_html__('Text Below Form','nsc-blog'),
+		'label'	=> esc_html__('Text Below Form','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));
@@ -1063,7 +1073,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_about_page_link',array(
-		'label'	=> esc_html__('About page link','nsc-blog'),
+		'label'	=> esc_html__('About page link','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));
@@ -1072,7 +1082,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('nsc_blog_contact_us_about_page_text',array(
-		'label'	=> esc_html__('About us page text','nsc-blog'),
+		'label'	=> esc_html__('About us page text','rj-bst'),
 		'section'=> 'nsc_blog_contact_us_page',
 		'type'=> 'text'
 	));

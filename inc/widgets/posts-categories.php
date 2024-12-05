@@ -2,7 +2,7 @@
 class NSC_Blog_Post_Category extends WP_Widget {
 	public function __construct() {
     parent::__construct(
-			'nsc-blog-posts-cats',
+			'rj-bst-posts-cats',
 			'NSC Posts Category'
 		);
 		add_action( 'widgets_init', function() {
@@ -26,13 +26,13 @@ class NSC_Blog_Post_Category extends WP_Widget {
 			$after_title = $args['after_title'];
 
 			printf(
-		    __('%1$s %2$s %3$s', 'nsc-blog' ),
+		    __('%1$s %2$s %3$s', 'rj-bst' ),
 				$before_title,
 		    $title,
 				$after_title
 			);
 		}
-		$cats_num  = ! empty( $instance['cats_num'] ) ? $instance['cats_num'] : esc_html__( '3', 'nsc-blog' );
+		$cats_num  = ! empty( $instance['cats_num'] ) ? $instance['cats_num'] : esc_html__( '3', 'rj-bst' );
     $cat_args = array(
            'orderby' => 'slug',
            'parent' => 0,
@@ -51,7 +51,7 @@ class NSC_Blog_Post_Category extends WP_Widget {
 			$view_all_cat_url = esc_attr( $instance['view_all_cat_url'] );
 			$view_all_cat_text = esc_html( $instance['view_all_cat_text'] );
 			printf(
-		    __('<a href="%1$s" aria-label="Visit all category listing page" class="view-all-category-btn" title="%1$s">%2$s </a>', 'nsc-blog' ),
+		    __('<a href="%1$s" aria-label="Visit all category listing page" class="view-all-category-btn" title="%1$s">%2$s </a>', 'rj-bst' ),
 				$view_all_cat_url,
 				$view_all_cat_text
 			);
@@ -61,22 +61,22 @@ class NSC_Blog_Post_Category extends WP_Widget {
 	}
 
 	public function form( $instance ) {
-    $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'nsc-blog' );
-		$view_all_cat_text  = ! empty( $instance['view_all_cat_text'] ) ? $instance['view_all_cat_text'] : esc_html__( '', 'nsc-blog' );
-		$view_all_cat_url  = ! empty( $instance['view_all_cat_url'] ) ? $instance['view_all_cat_url'] : esc_html__( '', 'nsc-blog' );
-		$cats_num  = ! empty( $instance['cats_num'] ) ? $instance['cats_num'] : esc_html__( '', 'nsc-blog' );
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'rj-bst' );
+		$view_all_cat_text  = ! empty( $instance['view_all_cat_text'] ) ? $instance['view_all_cat_text'] : esc_html__( '', 'rj-bst' );
+		$view_all_cat_url  = ! empty( $instance['view_all_cat_url'] ) ? $instance['view_all_cat_url'] : esc_html__( '', 'rj-bst' );
+		$cats_num  = ! empty( $instance['cats_num'] ) ? $instance['cats_num'] : esc_html__( '', 'rj-bst' );
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'rj-bst' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'View All Button' ) ); ?>" style="display:block;"><?php echo esc_html__( 'View All Button:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'View All Button' ) ); ?>" style="display:block;"><?php echo esc_html__( 'View All Button:', 'rj-bst' ); ?></label>
 			<input class="" id="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'view_all_cat_text' ) ); ?>" value="<?php echo esc_attr( $view_all_cat_text ); ?>" type="text" style="width: 100%;">
-			<label for="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_url' ) ); ?>" style="display:block;"><?php echo esc_html__( 'View All Url:', 'nsc-blog' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_url' ) ); ?>" style="display:block;"><?php echo esc_html__( 'View All Url:', 'rj-bst' ); ?></label>
 			<input class="" id="<?php echo esc_attr( $this->get_field_id( 'view_all_cat_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'view_all_cat_url' ) ); ?>" value="<?php echo esc_attr( $view_all_cat_url ); ?>" type="text" style="width: 100%;">
-			<span style="display:block;"><?php echo esc_html__('Create the page and assign the template "NSC Post Categories" to display all the categories', 'nsc-blog'); ?></span>
+			<span style="display:block;"><?php echo esc_html__('Create the page and assign the template "NSC Post Categories" to display all the categories', 'rj-bst'); ?></span>
 		</p>
 
 		<?php

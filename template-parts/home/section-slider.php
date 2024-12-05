@@ -2,11 +2,11 @@
 /**
  * The template part for slider section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section id="nsc-slider" class="mt-0">
-  <div id="nsc-blog-slider-aviationist" class="carousel slide nsc-blog-slider-aviationist">
+  <div id="rj-bst-slider-aviationist" class="carousel slide rj-bst-slider-aviationist">
 
     <?php $args = array(
       'post_type' => 'post',
@@ -20,7 +20,7 @@
       <?php $i = 1;
         while ($query->have_posts()) : $query->the_post(); ?>
       <button type="button"
-              data-bs-target="#nsc-blog-slider-aviationist"
+              data-bs-target="#rj-bst-slider-aviationist"
               data-bs-slide-to="<?php echo ($i - 1); ?>"
               class="<?php if ($i == 1 ) { echo "active"; } ?>"
               aria-current="<?php if ($i == 1 ) { echo "true"; } ?>"
@@ -69,7 +69,7 @@
                   <?php
                   $post_content = get_the_content();
                   $reading_time = nsc_blog_calculate_reading_time($post_content);
-                  echo esc_html($reading_time . "Min Read", 'nsc-blog');
+                  echo esc_html($reading_time . "Min Read", 'rj-bst');
                   ?>
                 </li>
               <?php } ?>
@@ -89,7 +89,7 @@
                   <path d="M3.55748 11.583C2.79908 11.5084 2.23094 11.2806 1.84992 10.8996C1.1665 10.2162 1.1665 9.11621 1.1665 6.91634V6.62467C1.1665 4.42478 1.1665 3.32485 1.84992 2.64142C2.53334 1.95801 3.63328 1.95801 5.83317 1.95801H8.1665C10.3664 1.95801 11.4664 1.95801 12.1497 2.64142C12.8332 3.32485 12.8332 4.42478 12.8332 6.62467V6.91634C12.8332 9.11621 12.8332 10.2162 12.1497 10.8996C11.4664 11.583 10.3664 11.583 8.1665 11.583C7.83955 11.5903 7.57915 11.6151 7.32335 11.6734C6.62429 11.8344 5.97696 12.1921 5.33726 12.504C4.42576 12.9485 3.97 13.1707 3.68399 12.9626C3.13682 12.5551 3.67165 11.2924 3.7915 10.708" stroke="#8F90A6" stroke-linecap="round"/>
                   </svg>
                   <?php $comments_count = wp_count_comments( $post->ID );
-                  echo esc_html($comments_count->approved, 'nsc-blog');
+                  echo esc_html($comments_count->approved, 'rj-bst');
                   ?>
                 </li>
               <?php } ?>
@@ -130,7 +130,7 @@
 
 
             <a href="<?php echo get_the_permalink(); ?>" class="nsc-slider-btn" title="<?php echo get_the_title(); ?>">
-              <?php echo esc_html('View Article', 'nsc-blog'); ?>
+              <?php echo esc_html('View Article', 'rj-bst'); ?>
             </a> */ ?>
 
           </div>
@@ -139,7 +139,7 @@
      </div>
   <?php
   }else { ?>
-   <h4> <?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?> </h4>
+   <h4> <?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?> </h4>
   <?php }
   wp_reset_query(); ?>
   </div>

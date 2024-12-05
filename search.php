@@ -2,7 +2,7 @@
 /**
  * The Template for displaying search results.
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 get_header();
 get_template_part('template-parts/breadcrumb'); ?>
@@ -11,7 +11,7 @@ get_template_part('template-parts/breadcrumb'); ?>
 	<div class="container">
 
 		<?php if ( have_posts() ) :
-      echo "<h2 class='search-head mt-3'>" . esc_html__('Posts', 'nsc-blog') . "</h2>";
+      echo "<h2 class='search-head mt-3'>" . esc_html__('Posts', 'rj-bst') . "</h2>";
 			while ( have_posts() ) : the_post(); ?>
         <div class="search-post">
           <h3 class="nsc-post-title mt-2">
@@ -25,9 +25,9 @@ get_template_part('template-parts/breadcrumb'); ?>
 			<div class="nsc-post-navigation">
 				<?php
 				  the_posts_pagination( array(
-					  'prev_text'          => __( 'Previous page', 'nsc-blog' ),
-					  'next_text'          => __( 'Next page', 'nsc-blog' ),
-					  'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'nsc-blog' ) . ' </span>',
+					  'prev_text'          => __( 'Previous page', 'rj-bst' ),
+					  'next_text'          => __( 'Next page', 'rj-bst' ),
+					  'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'rj-bst' ) . ' </span>',
 				  )); ?>
 			</div>
 		<?php else : ?>
@@ -41,7 +41,7 @@ get_template_part('template-parts/breadcrumb'); ?>
     );
     $category_suggestions = get_categories($category_args);
     if (!empty($category_suggestions)) {
-			echo "<h2 class='search-head mt-3'>" . esc_html__('Categories', 'nsc-blog') . "</h2>";
+			echo "<h2 class='search-head mt-3'>" . esc_html__('Categories', 'rj-bst') . "</h2>";
 			foreach ($category_suggestions as $category) {
 				echo '<h3 class="nsc-post-title mt-2"><i class="fa-solid fa-hashtag me-2"></i>
 							<a href="' . esc_url(get_category_link($category->term_id)) . '" title="' . esc_url(get_category_link($category->term_id)) . '">'

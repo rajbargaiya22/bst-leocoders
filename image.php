@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /*
 * Template parts to display logo
 *
-* @package nsc-blog
+* @package rj-bst
 */
 
 $show_aside = get_theme_mod('nsc_blog_site_content_aside', false);

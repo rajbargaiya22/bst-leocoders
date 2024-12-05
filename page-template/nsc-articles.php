@@ -2,7 +2,7 @@
 /*
 * Template Name: NSC Articles
 *
-* @package nsc-blog
+* @package rj-bst
 */
 
 
@@ -126,7 +126,7 @@ get_header(); ?>
 .page-template-nsc-articles .search-container .swrap {
     margin-right: 10px;
 }
-.page-template-nsc-articles aside.sidebar aside#nsc-blog-posts-cats-2 {
+.page-template-nsc-articles aside.sidebar aside#rj-bst-posts-cats-2 {
     display: none;
 }
 .page-template-nsc-articles aside.sidebar .widget12 {

@@ -2,7 +2,7 @@
 /**
  * The template part for display all article section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section id="nsc-all-articles" class="nsc-all-articles">
@@ -15,7 +15,7 @@
     );
      $query = new WP_Query($args);
      if ( $query->have_posts() ) { ?>
-        <div class="nsc-blog-post-grid">
+        <div class="rj-bst-post-grid">
          <?php while ($query->have_posts()) : $query->the_post();
          $image_id = get_post_thumbnail_id();
          $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
@@ -79,14 +79,14 @@
                    </div>
                </div>
                <a href="<?php echo get_the_permalink(); ?>" class="read-more-btn">
-                 <?php echo esc_html__('Read More', 'nsc-blog'); ?>
+                 <?php echo esc_html__('Read More', 'rj-bst'); ?>
                </a>
               </div>
           </div>
        <?php endwhile; ?>
        </div>
     <?php  }else { ?>
-      <h4> <?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?> </h4>
+      <h4> <?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?> </h4>
      <?php }
      wp_reset_query(); ?>
      <a href="#" class="nsc-common-btn mt-4">

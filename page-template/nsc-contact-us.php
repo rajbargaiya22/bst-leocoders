@@ -3,7 +3,7 @@
 * Template Name: NSC Contact Us
 *
 *
-* @package nsc-blog
+* @package rj-bst
 */
 
 if ( ! defined( 'ABSPATH' ) ) {

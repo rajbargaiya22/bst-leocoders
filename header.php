@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -98,13 +98,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="__label"><?php echo esc_html(get_theme_mod('rj_bst_leo_header_social_head', 'Social'));?> </div>
 
 					<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4); 
-						echo $socail_icon_number;
+						$social_icons = array('fontello-facebook', 'fontello-twitter', 'fontello-youtube-play', 'fontello-instagram');
+						$social_url = array('www.facebook.com', 'www.twitter.com', 'www.youtube.com', 'www.instagram.com' );
 					?>
 
 						<div class="s-btns s-btns--gray">
 							<ul class="d-flex flex-row flex-wrap align-items-center">
-								<?php for ($i=0; $i < $socail_icon_number ; $i++) { ?>
-									<li><a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i)) ?>"><i class="fontello-facebook"></i></a></li>		
+								<?php
+								
+
+								for ($i=0; $i < $socail_icon_number ; $i++) { ?>
+									<li>
+										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+										</a>
+									</li>		
 								<?php } ?>
 								<!-- <li><a class="f" href="#"><i class="fontello-facebook"></i></a></li>
 								<li><a class="t" href="#"><i class="fontello-twitter"></i></a></li>
@@ -161,8 +169,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<ul class="d-flex flex-row flex-wrap justify-content-center align-items-center">
 									<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4);  ?>
 										<?php for ($i=0; $i < $socail_icon_number; $i++) { ?>
-											<li><a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i)) ?>">
-												<i class="fontello-facebook"></i></a>
+											<li>
+											<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+										</a>
 											</li>		
 										<?php } ?>
 										<!-- <li><a class="f" href="https://www.facebook.com/BlueSkyTree1" target=""><i class="fontello-facebook"></i></a></li>

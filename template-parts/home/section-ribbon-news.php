@@ -2,7 +2,7 @@
 /**
  * The template part for news scrollbar
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 

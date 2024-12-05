@@ -2,7 +2,7 @@
 /*
 * Template Name: NSC Post Categories
 *
-* @package nsc-blog
+* @package rj-bst
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ $headh1 = get_theme_mod('nsc_blog_site_title', true);
      //if(get_theme_mod('nsc_blog_single_post_title', true) != '0'){ ?>
       <?php echo ($headh1 == 0) ? '<h1 class="nsc-cat-head">' : '<h2 class="nsc-cat-head">' ?>
 
-        <?php echo (count($categories) > 1 ) ? esc_html__("Categories", 'nsc-blog') : esc_html__("Category", 'nsc-blog');
+        <?php echo (count($categories) > 1 ) ? esc_html__("Categories", 'rj-bst') : esc_html__("Category", 'rj-bst');
         //echo get_the_title(); ?>
       <?php echo ($headh1 == 0) ? '</h1>' : '</h2>' ?>
     <?php //} ?>

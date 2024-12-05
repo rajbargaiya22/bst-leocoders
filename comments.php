@@ -7,7 +7,7 @@
  * handled by a callback to nsc_blog_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 /*
@@ -25,9 +25,9 @@ if ( post_password_required() ) {
 		<h3 class="nsc-comment-title">
 			<?php
 			$nsc_blog_comments_number = get_comments_number();
-					// echo esc_html__('Responses (' . $nsc_blog_comments_number . ')' , 'nsc-blog');
+					// echo esc_html__('Responses (' . $nsc_blog_comments_number . ')' , 'rj-bst');
 					printf(
-			    	esc_html__( 'Responses (%d)', 'nsc-blog' ),
+			    	esc_html__( 'Responses (%d)', 'rj-bst' ),
 			    	$nsc_blog_comments_number
 					);
 			?>
@@ -51,15 +51,15 @@ if ( post_password_required() ) {
 	<?php
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'nsc-blog' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'rj-bst' ); ?></p>
 	<?php endif; ?>
 
 	<?php
 		comment_form( array(
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
-			'title_reply' => esc_html(get_theme_mod('nsc_blog_single_blog_comment_title',__('','nsc-blog' )) ),
-			'label_submit' => esc_html(get_theme_mod('nsc_blog_single_blog_comment_button_text',__('Submit','nsc-blog' )) ),
+			'title_reply' => esc_html(get_theme_mod('nsc_blog_single_blog_comment_title',__('','rj-bst' )) ),
+			'label_submit' => esc_html(get_theme_mod('nsc_blog_single_blog_comment_button_text',__('Submit','rj-bst' )) ),
 		) );
 	?>
 </div>

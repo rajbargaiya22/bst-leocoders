@@ -1,17 +1,17 @@
 <?php
 /**
- * The template for displaying search forms in nsc-blog
+ * The template for displaying search forms in rj-bst
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 
 <form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
-    <label for="s" class="screen-reader-text"><?php _e('Search for:', 'nsc-blog'); ?></label>
-    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"  placeholder="<?php echo esc_attr__('Search...', 'nsc-blog'); ?>" autocomplete="off" required />
+    <label for="s" class="screen-reader-text"><?php _e('Search for:', 'rj-bst'); ?></label>
+    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"  placeholder="<?php echo esc_attr__('Search...', 'rj-bst'); ?>" autocomplete="off" required />
     <input type="hidden" name="post_type" value="post" />
     <label for="searchsubmit">
-      <input type="submit" id="searchsubmit" value="<?php echo esc_attr__('Search', 'nsc-blog'); ?>" class="d-none" />
+      <input type="submit" id="searchsubmit" value="<?php echo esc_attr__('Search', 'rj-bst'); ?>" class="d-none" />
       <?php /*
       <i class="fas fa-search"></i>
       */ ?>
@@ -20,7 +20,7 @@
       <path d="M21 21L16.65 16.65" stroke="#4F4F4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span class="screen-reader-text">
-        <?php echo esc_html(get_theme_mod('nsc_blog_search_button',__('Search','nsc-blog')));?>
+        <?php echo esc_html(get_theme_mod('nsc_blog_search_button',__('Search','rj-bst')));?>
       </span>
     </label>
 </form>

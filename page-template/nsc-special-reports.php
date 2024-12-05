@@ -3,7 +3,7 @@
 * Template Name: NSC Special Report
 *
 *
-* @package nsc-blog
+* @package rj-bst
 */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

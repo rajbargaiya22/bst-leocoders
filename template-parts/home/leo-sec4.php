@@ -2,7 +2,7 @@
 /**
  * The template part for testimonial section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section class="section section--testimonial">
@@ -18,7 +18,7 @@
 				<div class="section-heading section-heading--left">
 					
 				<h5 class="__subtitle"><?php echo esc_html(get_theme_mod('rj_bst_leo_testimonial_title', 'Testimonials')); ?></h5>
-				<h2 class="__title"><?php echo esc_html(get_theme_mod('rj_bst_leo_testimonial_content', 'People Say About Vend')); ?><span><?php esc_html_e('GO', 'rj_bst_leo'); ?></span></h2>
+				<h2 class="__title"><?php echo get_theme_mod('rj_bst_leo_testimonial_content', 'People Say About <span> Blue Sky Tree</span>'); ?></h2>
 				</div>
 			</div>
 

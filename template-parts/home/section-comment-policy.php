@@ -2,7 +2,7 @@
 /**
  * The template part for display comment policy
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
  $bgimage = get_theme_mod('nsc_blog_comments_policy_bgimage', get_template_directory_uri(). '/assets/images/comment-policy.png');

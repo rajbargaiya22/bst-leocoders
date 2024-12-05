@@ -2,7 +2,7 @@
 /**
  * The template for displaying all posts of the custom post type 'videos_interviews'
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 ?>
@@ -77,7 +77,7 @@ p.video-desc {
                       endwhile;
                       wp_reset_postdata();
                   else :
-                      echo '<p>' . __('No videos found.', 'nsc-blog') . '</p>';
+                      echo '<p>' . __('No videos found.', 'rj-bst') . '</p>';
                   endif;
                   ?>
                 </ul>
@@ -138,7 +138,7 @@ p.video-desc {
                       endwhile;
                       wp_reset_postdata();
                   else :
-                      echo '<p>' . __('No videos found.', 'nsc-blog') . '</p>';
+                      echo '<p>' . __('No videos found.', 'rj-bst') . '</p>';
                   endif;
                   ?>
                 </ul>

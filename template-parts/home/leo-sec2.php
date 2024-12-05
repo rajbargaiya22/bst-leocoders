@@ -2,7 +2,7 @@
 /**
  * The template part for about us section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 
@@ -12,7 +12,7 @@
 			<div class="col-12 col-lg-7">
 				<div class="section-heading section-heading--left">
 				<h5 class="__subtitle"><?php echo esc_html(get_theme_mod('rj_bst_leo_about_subtitle', 'About')); ?></h5>
-				<h2 class="__title"><?php echo wp_kses_post(get_theme_mod('rj_bst_leo_about_title', 'About Blue<br> <span>Sky Tree</span>')); ?></h2>
+				<h2 class="__title"><?php echo wp_kses_post(get_theme_mod('rj_bst_leo_about_title', 'About Blue<br> Sky Tree')); ?></h2>
 				</div>
 
 				<div class="spacer py-3"></div>

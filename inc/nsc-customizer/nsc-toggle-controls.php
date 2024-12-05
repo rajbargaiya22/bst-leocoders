@@ -35,7 +35,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	class NSC_BLOG_SEPARATOR extends WP_Customize_Control {
 		public function render_content(){
 		?>
-			<div class="nsc-blog-custom-separator">
+			<div class="rj-bst-custom-separator">
 				<?php echo esc_html( $this->label ); ?>
 			</div>
 		<?php

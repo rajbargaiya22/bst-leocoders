@@ -2,7 +2,7 @@
 /**
  * The template part for people who trust section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 

@@ -2,7 +2,7 @@
 /**
  * The template part for popular post section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section id="nsc-popular-post" class="nsc-popular-post">
@@ -23,7 +23,7 @@
     );
      $query = new WP_Query($args);
      if ( $query->have_posts() ) { ?>
-        <div class="nsc-blog-grid-5">
+        <div class="rj-bst-grid-5">
          <?php while ($query->have_posts()) : $query->the_post();
          $image_id = get_post_thumbnail_id();
          $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
@@ -87,7 +87,7 @@
                </div>
 
                <a href="<?php echo get_the_permalink(); ?>" class="read-more-btn" title="<?php echo esc_attr(get_the_title()); ?>">
-                 <?php echo esc_html__('Read More', 'nsc-blog'); ?>
+                 <?php echo esc_html__('Read More', 'rj-bst'); ?>
                  <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5.05089C0.5 4.76592 0.731012 4.53491 1.01598 4.53491L13.4 4.53491C13.685 4.53491 13.916 4.76592 13.916 5.05089C13.916 5.33586 13.685 5.56687 13.4 5.56687L1.01598 5.56687C0.731012 5.56687 0.5 5.33586 0.5 5.05089Z" fill="url(#paint0_linear_268_2268)"/>
                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3175 0.526839C10.5364 0.344403 10.8618 0.373975 11.0442 0.59289L14.3007 4.50052C14.5665 4.81944 14.5665 5.2827 14.3007 5.60162L11.0442 9.50924C10.8618 9.72816 10.5364 9.75773 10.3175 9.5753C10.0986 9.39286 10.069 9.0675 10.2514 8.84858L13.4162 5.05107L10.2514 1.25355C10.069 1.03464 10.0986 0.709276 10.3175 0.526839Z" fill="url(#paint1_linear_268_2268)"/>
@@ -113,7 +113,7 @@
        <?php endwhile; ?>
        </div>
     <?php  }else { ?>
-      <h4> <?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?> </h4>
+      <h4> <?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?> </h4>
      <?php }
      wp_reset_query(); ?>
 

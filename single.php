@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
  get_header();
@@ -71,7 +71,7 @@
                   <?php
                     $post_content = get_the_content();
                     $reading_time = nsc_blog_calculate_reading_time($post_content);
-                    echo esc_html($reading_time . "Min Read", 'nsc-blog');
+                    echo esc_html($reading_time . "Min Read", 'rj-bst');
                   ?>
                 </li>
                 <li>
@@ -93,7 +93,7 @@
                   <button type="button" name="button" class="copy-link-pop-btn" aria-labelledby="<?php echo esc_attr("Share".$post_id); ?>">
                     <i class="fa-solid fa-share-nodes"></i>
                     <span class="screen-reader-text">
-                      <?php echo esc_html(get_theme_mod('nsc_blog_single_post_share_button',__('Share Button','nsc-blog')));?>
+                      <?php echo esc_html(get_theme_mod('nsc_blog_single_post_share_button',__('Share Button','rj-bst')));?>
                     </span>
                   </button>
                   <div class="nsc-popups" id="<?php echo esc_attr("Share".$post_id); ?>">
@@ -103,27 +103,27 @@
                       ?>
                       <ul class="mb-0">
                         <li>
-                          <a href="<?php echo esc_attr('https://www.facebook.com/sharer/sharer.php?u=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Facebook', 'nsc-blog'); ?>">
+                          <a href="<?php echo esc_attr('https://www.facebook.com/sharer/sharer.php?u=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Facebook', 'rj-bst'); ?>">
                             <i class="fa-brands fa-facebook"></i>
-                            <?php echo esc_html('Facebook', 'nsc-blog'); ?>
+                            <?php echo esc_html('Facebook', 'rj-bst'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="<?php echo esc_attr('https://twitter.com/intent/tweet?url=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Twitter', 'nsc-blog'); ?>">
+                          <a href="<?php echo esc_attr('https://twitter.com/intent/tweet?url=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Twitter', 'rj-bst'); ?>">
                             <i class="fa-brands fa-x-twitter"></i>
-                            <?php echo esc_html('Twitter', 'nsc-blog'); ?>
+                            <?php echo esc_html('Twitter', 'rj-bst'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="<?php echo esc_attr('https://www.linkedin.com/shareArticle?url=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Linkedin', 'nsc-blog'); ?>">
+                          <a href="<?php echo esc_attr('https://www.linkedin.com/shareArticle?url=' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Linkedin', 'rj-bst'); ?>">
                             <i class="fa-brands fa-linkedin"></i>
-                            <?php echo esc_html('Linkedin', 'nsc-blog'); ?>
+                            <?php echo esc_html('Linkedin', 'rj-bst'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="<?php echo esc_attr('https://www.instagram.com/your_username_here/' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Instagram', 'nsc-blog'); ?>">
+                          <a href="<?php echo esc_attr('https://www.instagram.com/your_username_here/' . $post_url ); ?>" target="_blank" title="<?php echo esc_attr('Instagram', 'rj-bst'); ?>">
                             <i class="fa-brands fa-instagram"></i>
-                            <?php echo esc_html('Instagram', 'nsc-blog'); ?>
+                            <?php echo esc_html('Instagram', 'rj-bst'); ?>
                           </a>
                         </li>
                       </ul>
@@ -136,7 +136,7 @@
                   <button type="button" name="button" class="copy-link-pop-btn" aria-labelledby="<?php echo esc_attr("copy".$post_id); ?>">
                     <i class="fa-solid fa-ellipsis"></i>
                     <span class="screen-reader-text">
-                      <?php echo esc_html(get_theme_mod('nsc_blog_single_post_link_button',__('Link','nsc-blog')));?>
+                      <?php echo esc_html(get_theme_mod('nsc_blog_single_post_link_button',__('Link','rj-bst')));?>
                     </span>
                   </button>
 
@@ -147,20 +147,20 @@
                           <button type="button" id="nsc-copy-link" class="copy-link" data-url="<?php echo get_the_permalink(); ?>">
                             <i class="fa-regular fa-paste"></i>
                             <span class="normal-text">
-                              <?php echo esc_html('Copy link', 'nsc-blog'); ?>
+                              <?php echo esc_html('Copy link', 'rj-bst'); ?>
                             </span>
                             <span class="copied-text">
-                              <?php echo esc_html('Copied', 'nsc-blog'); ?>
+                              <?php echo esc_html('Copied', 'rj-bst'); ?>
                             </span>
                             <span class="screen-reader-text">
-                              <?php echo esc_html(get_theme_mod('nsc_blog_single_post_copy_link_button',__('Copy Link','nsc-blog')));?>
+                              <?php echo esc_html(get_theme_mod('nsc_blog_single_post_copy_link_button',__('Copy Link','rj-bst')));?>
                             </span>
                           </button>
                         </li>
                         <li>
-                          <a href="#comments" title="<?php echo esc_attr('Comment this article', 'nsc-blog'); ?>">
+                          <a href="#comments" title="<?php echo esc_attr('Comment this article', 'rj-bst'); ?>">
                             <i class="fa-regular fa-message"></i>
-                            <?php echo esc_html('Comment this article', 'nsc-blog'); ?>
+                            <?php echo esc_html('Comment this article', 'rj-bst'); ?>
                           </a>
                         </li>
                       </ul>
@@ -381,7 +381,7 @@
                           </div>
                         </div>
                         <a href="<?php echo get_permalink($prev_post->ID); ?>" class="nsc-nav-btn d-block">
-                          <?php echo esc_html('<< Previous', 'nsc-blog'); ?>
+                          <?php echo esc_html('<< Previous', 'rj-bst'); ?>
                         </a>
                 <?php endif; ?>
             </div>
@@ -426,7 +426,7 @@
                   </div>
                 </div>
                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="nsc-nav-btn text-end d-block">
-                  <?php echo esc_html('Next >>', 'nsc-blog'); ?>
+                  <?php echo esc_html('Next >>', 'rj-bst'); ?>
                 </a>
                 <?php endif; ?>
             </div>

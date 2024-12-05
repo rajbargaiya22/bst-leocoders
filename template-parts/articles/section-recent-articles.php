@@ -2,12 +2,12 @@
 /**
  * The template part for display all article section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <style>
 /* Base styles for the posts grid */
-#nsc-recent-articles .nsc-blog-post-grid {
+#nsc-recent-articles .rj-bst-post-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -22,13 +22,13 @@
 
 /* Make the grid responsive */
 @media (max-width: 1024px) {
-    #nsc-recent-articles .nsc-blog-post-grid {
+    #nsc-recent-articles .rj-bst-post-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    #nsc-recent-articles .nsc-blog-post-grid {
+    #nsc-recent-articles .rj-bst-post-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -82,7 +82,7 @@
   background-color: #fff;
   color: #000;
 }
-#nsc-recent-articles .nsc-blog-post-grid img.post-thumbnail {
+#nsc-recent-articles .rj-bst-post-grid img.post-thumbnail {
     min-height: 99px;
     height: 100%;
     object-fit: cover;
@@ -109,18 +109,18 @@
     );
     $query = new WP_Query($args);
     if ($query->have_posts()) { ?>
-        <div class="nsc-blog-post-grid">
+        <div class="rj-bst-post-grid">
             <?php while ($query->have_posts()) : $query->the_post();
                 get_template_part('template-parts/content', get_post_format());
             endwhile; ?>
         </div>
     <?php } else { ?>
-        <h4><?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?></h4>
+        <h4><?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?></h4>
     <?php }
     wp_reset_postdata(); ?>
     <div class="nsc-common-btn-wrap" style="text-align:center;">
       <button class="nsc-common-btn mt-4">
-          <?php echo esc_html__('Load More', 'nsc-blog'); ?>
+          <?php echo esc_html__('Load More', 'rj-bst'); ?>
       </button>
     </div>
 </section>

@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  *
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

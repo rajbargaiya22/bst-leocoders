@@ -2,7 +2,7 @@
 /**
  * The template part for display aviationist carousel
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 ?>
@@ -49,7 +49,7 @@
        <?php endwhile; ?>
        </div>
      <?php }else { ?>
-      <h4> <?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?> </h4>
+      <h4> <?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?> </h4>
      <?php }
      wp_reset_query(); ?>
 

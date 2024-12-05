@@ -2,7 +2,7 @@
 /*
 * Template parts to topbar
 *
-* @package nsc-blog
+* @package rj-bst
 */
 ?>
 

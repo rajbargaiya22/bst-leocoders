@@ -2,7 +2,7 @@
 /**
  * The template part for key fact section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section class="section section--no-pb section--features">

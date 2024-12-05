@@ -2,7 +2,7 @@
 /**
  * The template part for people who trust section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 
@@ -15,9 +15,9 @@
         <div class="spacer py-5"></div>
         <div class="brands-list brands-list--slider">
             <?php 
-            $total_logos = get_theme_mod('rj_bst_leo_brand_logo_count', 5); 
+            $total_logos = get_theme_mod('rj_bst_leo_brand_logo_count', 19); 
             for ($i = 1; $i <= $total_logos; $i++) {
-                $brand_logo = get_theme_mod("rj_bst_leo_brand_logo_$i");
+                $brand_logo = get_theme_mod("rj_bst_leo_brand_logo_$i", get_template_directory_uri(). '/assets/images/partners/'.$i.'.png');
                 if ($brand_logo): 
             ?>
                 <div class="__item">

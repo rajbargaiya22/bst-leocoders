@@ -2,7 +2,7 @@
 /**
  * The template part for first section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 <section id="latest-post">
@@ -54,7 +54,7 @@
             <button type="button" name="button">
               <i class="fa-regular fa-comment-dots"></i>
               <?php $comments_count = wp_count_comments( $post->ID );
-              echo esc_html($comments_count->approved, 'nsc-blog');
+              echo esc_html($comments_count->approved, 'rj-bst');
               ?>
             </button>
           <?php } ?>
@@ -87,7 +87,7 @@
 
    <?php endwhile;
   }else { ?>
-    <h4> <?php echo esc_html_e('Please add the post to see this section', 'nsc-blog'); ?> </h4>
+    <h4> <?php echo esc_html_e('Please add the post to see this section', 'rj-bst'); ?> </h4>
   <?php }
    wp_reset_query(); ?>
  </div>

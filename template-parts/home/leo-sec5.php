@@ -2,7 +2,7 @@
 /**
  * The template part for social media feed section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 ?>
 

@@ -93,9 +93,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="s-btns s-btns--white">
 						<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4); ?>
 							<ul class="d-flex flex-row flex-wrap align-items-center ps-0">
-								<?php for ($i=0; $i < $socail_icon_number; $i++) { ?>
-									<li><a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i)) ?>">
-										<i class="fontello-facebook"></i></a>
+								<?php 
+									$social_icons = array('fontello-facebook', 'fontello-twitter', 'fontello-youtube-play', 'fontello-instagram');
+									$social_url = array('www.facebook.com', 'www.twitter.com', 'www.youtube.com', 'www.instagram.com' );
+									for ($i=0; $i < $socail_icon_number; $i++) { ?>
+									<li>
+										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+										</a>
 									</li>		
 								<?php } ?>
 							</ul>
@@ -112,45 +117,80 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </footer>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="<?php echo get_template_directory_uri() . '/assets/js/leo-main.min.js' ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- <script src="<?php //echo get_template_directory_uri() . '/assets/js/leo-main.min.js' ?>"></script> -->
 
 		<script>
-			jQuery(document).ready(function(){
-			$('#start-screen__slider').slick({
-				autoplay: true,
-				fade: true,
-				speed: 1200,
-				dots: true,
-				arrows:false,
-				appendDots: '#start-screen__slider-nav',
-				customPaging: function (slider, i) {
-					// Use custom dots (e.g., numbers or icons)
-					return `<span class="slick-dot"></span>`;
-				},
-				responsive: [
-					{
-						breakpoint: 767,
-						settings: {
-							appendDots: '#start-screen__slider-nav'
+			jQuery(document).ready(function($){
+
+				$('#start-screen__slider').slick({
+					autoplay: true,
+					fade: true,
+					speed: 1200,
+					dots: true,
+					arrows:false,
+					appendDots: '#start-screen__slider-nav',
+					customPaging: function (slider, i) {
+						// Use custom dots (e.g., numbers or icons)
+						return `<span class="slick-dot"></span>`;
+					},
+					responsive: [
+						{
+							breakpoint: 767,
+							settings: {
+								appendDots: '#start-screen__slider-nav'
+							}
 						}
-					}
-				]
-			});
-		
-		$('.review--slider').slick({
-			dots: true, 
-			arrows: false,
-			autoplay: true, 
-			autoplaySpeed: 3000,
-			infinite: true, 
-			speed: 500, 
-			slidesToShow: 1,
-			slidesToScroll: 1, 
-			appendDots: $('#slick-dots--container-0'), 
-			});
-		});
+					]
+				});
+			
+				$('.review--slider').slick({
+					dots: true, 
+					arrows: false,
+					autoplay: true, 
+					autoplaySpeed: 3000,
+					infinite: true, 
+					speed: 500, 
+					slidesToShow: 1,
+					slidesToScroll: 1, 
+					appendDots: $('#slick-dots--container-0'), 
+					});
+				
+			
+				$('.brands-list').slick({
+					dots: false, 
+					arrows: false,
+					autoplay: true, 
+					autoplaySpeed: 3000,
+					infinite: true, 
+					speed: 500, 
+					slidesToShow: 5,
+					slidesToScroll: 1, 
+					responsive: [
+							{
+								breakpoint: 767,
+								settings: {
+									appendDots: '#start-screen__slider-nav'
+								}
+							}
+						]
+					});
+
+
+					$('.accordion-item').each(function () {
+						$(this).click(function () {
+							$('.accordion-item').removeClass('active');
+							$('.accordion-content').css('display', 'none');
+
+							$(this).addClass('active');
+							$(this).find('.accordion-content').css('display', 'block');
+						});
+					});
+
+
+
+				});
 
 		</script>
 

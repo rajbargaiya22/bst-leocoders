@@ -2,7 +2,7 @@
 /**
  * The template part for latest article section
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
   $sidebar = get_theme_mod('nsc_blog_latest_articles_sidebar', true);

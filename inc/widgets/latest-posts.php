@@ -7,14 +7,14 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
     function __construct() {
         parent::__construct(
             'nsc_latest_posts_widget', // Widget ID
-            __('NSC Latest Posts', 'nsc-blog'), // Widget name
-            array('description' => __('Displays the latest posts with a "View All" button', 'nsc-blog')) // Description
+            __('NSC Latest Posts', 'rj-bst'), // Widget name
+            array('description' => __('Displays the latest posts with a "View All" button', 'rj-bst')) // Description
         );
     }
 
     public function widget($args, $instance) {
         // Default settings
-        $title = isset($instance['title']) ? $instance['title'] : __('Latest Posts', 'nsc-blog');
+        $title = isset($instance['title']) ? $instance['title'] : __('Latest Posts', 'rj-bst');
         $num_posts = isset($instance['num_posts']) ? (int) $instance['num_posts'] : 5;
         $view_all_link = isset($instance['view_all_link']) ? $instance['view_all_link'] : '';
 
@@ -76,7 +76,7 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
             ?>
             <div class="nsc-view-all">
                 <a href="javascript:void(0);" class="nsc-view-all-button" onclick="openCategoryPopup()">
-                    <?php esc_html_e('View All Posts', 'nsc-blog'); ?>
+                    <?php esc_html_e('View All Posts', 'rj-bst'); ?>
                 </a>
             </div>
 
@@ -85,7 +85,7 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
                     <span class="nsc-popup-close" onclick="closeCategoryPopup()">&times;</span>
                     <?php echo do_shortcode('[custom_search]'); ?>
 
-                    <h3 class="section-main-head"><?php esc_html_e('All Categories', 'nsc-blog'); ?></h3>
+                    <h3 class="section-main-head"><?php esc_html_e('All Categories', 'rj-bst'); ?></h3>
                     <ul>
                         <?php
                         $categories = get_categories();
@@ -103,14 +103,14 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
     }
 
     public function form($instance) {
-        $title = isset($instance['title']) ? $instance['title'] : __('Latest Posts', 'nsc-blog');
+        $title = isset($instance['title']) ? $instance['title'] : __('Latest Posts', 'rj-bst');
         $num_posts = isset($instance['num_posts']) ? (int) $instance['num_posts'] : 5;
         $view_all_link = isset($instance['view_all_link']) ? $instance['view_all_link'] : '';
 
         ?>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('title')); ?>">
-                <?php esc_html_e('Widget Title:', 'nsc-blog'); ?>
+                <?php esc_html_e('Widget Title:', 'rj-bst'); ?>
             </label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('title')); ?>"
@@ -120,7 +120,7 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('num_posts')); ?>">
-                <?php esc_html_e('Number of posts to display:', 'nsc-blog'); ?>
+                <?php esc_html_e('Number of posts to display:', 'rj-bst'); ?>
             </label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('num_posts')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('num_posts')); ?>"
@@ -132,7 +132,7 @@ class NSC_Latest_Posts_Widget extends WP_Widget {
 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('view_all_link')); ?>">
-                <?php esc_html_e('Link for "View All" button:', 'nsc-blog'); ?>
+                <?php esc_html_e('Link for "View All" button:', 'rj-bst'); ?>
             </label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('view_all_link')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('view_all_link')); ?>"

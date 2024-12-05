@@ -7,14 +7,14 @@ class NSC_Tabbed_Widget extends WP_Widget {
     function __construct() {
         parent::__construct(
             'nsc_tabbed_widget',
-            __('NSC Posts, Tags & Comments', 'nsc-blog'),
-            array('description' => __('Widget with horizontal tabs for posts, tags, and comments', 'nsc-blog'))
+            __('NSC Posts, Tags & Comments', 'rj-bst'),
+            array('description' => __('Widget with horizontal tabs for posts, tags, and comments', 'rj-bst'))
         );
     }
 
     public function widget($args, $instance) {
         // Widget title
-        $title = isset($instance['title']) ? $instance['title'] : __('Latest Content', 'nsc-blog');
+        $title = isset($instance['title']) ? $instance['title'] : __('Latest Content', 'rj-bst');
 
         // Display the widget's outer structure
         echo $args['before_widget'];
@@ -38,7 +38,7 @@ class NSC_Tabbed_Widget extends WP_Widget {
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12.9033C3 12.6272 3.22386 12.4033 3.5 12.4033H9.5C9.77614 12.4033 10 12.6272 10 12.9033C10 13.1795 9.77614 13.4033 9.5 13.4033H3.5C3.22386 13.4033 3 13.1795 3 12.9033Z" fill="#21272A"/>
                       <path d="M5.5 7.40332H3.5C3.36739 7.40332 3.24021 7.35064 3.14645 7.25687C3.05268 7.16311 3 7.03593 3 6.90332V4.90332C3 4.77071 3.05268 4.64354 3.14645 4.54977C3.24021 4.456 3.36739 4.40332 3.5 4.40332H5.5C5.63261 4.40332 5.75979 4.456 5.85355 4.54977C5.94732 4.64354 6 4.77071 6 4.90332V6.90332C6 7.03593 5.94732 7.16311 5.85355 7.25687C5.75979 7.35064 5.63261 7.40332 5.5 7.40332Z" fill="#21272A"/>
                     </svg>
-                    <?php esc_html_e('News', 'nsc-blog'); ?>
+                    <?php esc_html_e('News', 'rj-bst'); ?>
                   </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ class NSC_Tabbed_Widget extends WP_Widget {
                         </clipPath>
                       </defs>
                     </svg>
-                    <?php esc_html_e('Tags', 'nsc-blog'); ?>
+                    <?php esc_html_e('Tags', 'rj-bst'); ?>
                   </a>
                 </li>
                 <li>
@@ -64,7 +64,7 @@ class NSC_Tabbed_Widget extends WP_Widget {
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666748 0.903483C0.666748 0.535293 0.965225 0.236816 1.33341 0.236816H12.0001C12.3683 0.236816 12.6667 0.535293 12.6667 0.903483V5.57015H14.6667C15.0349 5.57015 15.3334 5.86863 15.3334 6.23682V11.5702C15.3334 11.9383 15.0349 12.2368 14.6667 12.2368H13.2762L12.4715 13.0416C12.2111 13.3019 11.789 13.3019 11.5287 13.0416L10.7239 12.2368H7.33341C6.96522 12.2368 6.66675 11.9383 6.66675 11.5702V9.57015H5.94289L4.80482 10.7082C4.54447 10.9686 4.12236 10.9686 3.86201 10.7082L2.72394 9.57015H1.33341C0.965225 9.57015 0.666748 9.27167 0.666748 8.90348V0.903483ZM11.3334 8.23682V1.57015H2.00008V8.23682H3.00008C3.17689 8.23682 3.34646 8.30705 3.47149 8.43208L4.33341 9.29401L5.19534 8.43208C5.32037 8.30705 5.48994 8.23682 5.66675 8.23682H11.3334ZM12.0001 9.57015H8.00008V10.9035H11.0001C11.1769 10.9035 11.3465 10.9737 11.4715 11.0987L12.0001 11.6273L12.5287 11.0987C12.6537 10.9737 12.8233 10.9035 13.0001 10.9035H14.0001V6.90348H12.6667V8.90348C12.6667 9.27167 12.3683 9.57015 12.0001 9.57015ZM3.33341 3.57015C3.33341 3.20196 3.63189 2.90348 4.00008 2.90348H8.00008C8.36827 2.90348 8.66675 3.20196 8.66675 3.57015C8.66675 3.93834 8.36827 4.23682 8.00008 4.23682H4.00008C3.63189 4.23682 3.33341 3.93834 3.33341 3.57015ZM3.33341 6.23682C3.33341 5.86863 3.63189 5.57015 4.00008 5.57015H6.00008C6.36827 5.57015 6.66675 5.86863 6.66675 6.23682C6.66675 6.60501 6.36827 6.90348 6.00008 6.90348H4.00008C3.63189 6.90348 3.33341 6.60501 3.33341 6.23682Z" fill="black" fill-opacity="0.85"/>
                     </svg>
 
-                    <?php esc_html_e('Comments', 'nsc-blog'); ?>
+                    <?php esc_html_e('Comments', 'rj-bst'); ?>
                   </a>
                 </li>
             </ul>
@@ -171,12 +171,12 @@ class NSC_Tabbed_Widget extends WP_Widget {
 
     public function form($instance) {
         // Widget title field
-        $title = isset($instance['title']) ? $instance['title'] : __('Latest Content', 'nsc-blog');
+        $title = isset($instance['title']) ? $instance['title'] : __('Latest Content', 'rj-bst');
 
         ?>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('title')); ?>">
-                <?php esc_html_e('Widget Title:', 'nsc-blog'); ?>
+                <?php esc_html_e('Widget Title:', 'rj-bst'); ?>
             </label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('title')); ?>"

@@ -3,7 +3,7 @@
  * NSC Blog functions and definitions.
  *
  *
- * @package nsc-blog
+ * @package rj-bst
  */
 
 function nsc_blog_enqueue_scripts() {
@@ -14,7 +14,7 @@ function nsc_blog_enqueue_scripts() {
 	wp_enqueue_style( 'nsc-slick-slider', get_template_directory_uri(). '/assets/css/slick-theme.css' );
     // wp_enqueue_style( 'slick-style', get_template_directory_uri().'/assets/css/slick.css' );
 	wp_enqueue_style( 'nsc-owl-carousel', get_template_directory_uri(). '/assets/css/owl.carousel.css' );
-	wp_enqueue_style( 'critical-min', get_template_directory_uri(). '/assets/css/critical.min.css' );
+	// wp_enqueue_style( 'critical-min', get_template_directory_uri(). '/assets/css/critical.min.css' );
 	wp_enqueue_style( 'header-footer', get_template_directory_uri(). '/assets/css/header-footer.css' );
 
 	// wp_enqueue_script('nsc-jquery-js', get_template_directory_uri(). '/assets/js/jquery-min.js', false, false);
@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'nsc_blog_enqueue_scripts' );
 if ( !function_exists( 'nsc_blog_theme_setup' )) {
   function nsc_blog_theme_setup(){
 
-		load_theme_textdomain('nsc-blog', get_template_directory() . "/languages" );
+		load_theme_textdomain('rj-bst', get_template_directory() . "/languages" );
 
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'title-tag' );
@@ -72,9 +72,9 @@ if ( !function_exists( 'nsc_blog_theme_setup' )) {
 		add_editor_style( array( 'css/nsc-editor-style.css' ) );
 
 		register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'nsc-blog' ),
-		'topbar' => __( "Topbar Menu", 'nsc-blog' ),
-		'help-menu' => __( "Topbar Menu", 'nsc-blog' ),
+		'primary' => __( 'Primary Menu', 'rj-bst' ),
+		'topbar' => __( "Topbar Menu", 'rj-bst' ),
+		'help-menu' => __( "Topbar Menu", 'rj-bst' ),
 		) );
 
 	}
@@ -180,7 +180,7 @@ function ajax_search() {
 	if ($post_suggestions->have_posts() || !empty($category_suggestions)) {
 
     if ($post_suggestions ->have_posts()) {
-			echo "<h2 class='search-head'>" . esc_html__('Posts', 'nsc-blog') . "</h2>";
+			echo "<h2 class='search-head'>" . esc_html__('Posts', 'rj-bst') . "</h2>";
 			echo "<ul>";
         while ($post_suggestions ->have_posts()) {
             $post_suggestions ->the_post();
@@ -191,7 +191,7 @@ function ajax_search() {
     }
 
 		if (!empty($category_suggestions)) {
-			echo "<h2 class='search-head mt-3'>" . esc_html__('Category', 'nsc-blog'	) . "</h2>";
+			echo "<h2 class='search-head mt-3'>" . esc_html__('Category', 'rj-bst'	) . "</h2>";
 			echo "<ul>";
 			foreach ($category_suggestions as $category) {
 				echo '<li><i class="fa-solid fa-hashtag"></i><a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a></li>';
@@ -215,7 +215,7 @@ add_action('wp_ajax_nopriv_ajax_search', 'ajax_search');
 function nsc_blog_comment_form_add_placeholder($comment_field) {
     $comment_field = str_replace(
         '<textarea ',
-        '<textarea placeholder="' . __('Add to discussion', 'nsc-blog') . '" ',
+        '<textarea placeholder="' . __('Add to discussion', 'rj-bst') . '" ',
         $comment_field
     );
     return $comment_field;
@@ -234,15 +234,15 @@ function nsc_blog_custom_comment_list($comment, $args, $depth) {
 
 					<div class="nsc-comment-content">
 						<div class="d-flex align-items-center gap-2">
-								<?php printf(__('<b class="fn nsc-comment-author">%s</b>', 'nsc-blog'), get_comment_author_link()); ?>
+								<?php printf(__('<b class="fn nsc-comment-author">%s</b>', 'rj-bst'), get_comment_author_link()); ?>
 
 								<div class="comment-metadata">
                     <a href="<?php echo esc_url(get_comment_link($comment, $args)); ?>">
                         <time datetime="<?php comment_time('c'); ?>">
-                            <?php printf(__('%1$s at %2$s', "nsc-blog"), get_comment_date(), get_comment_time()); ?>
+                            <?php printf(__('%1$s at %2$s', "rj-bst"), get_comment_date(), get_comment_time()); ?>
                         </time>
                     </a>
-                    <?php edit_comment_link(__('(Edit)', "nsc-blog"), '<span class="edit-link">', '</span>'); ?>
+                    <?php edit_comment_link(__('(Edit)', "rj-bst"), '<span class="edit-link">', '</span>'); ?>
 
                 </div>
 						</div>
@@ -261,7 +261,7 @@ function nsc_blog_custom_comment_list($comment, $args, $depth) {
 
 					<?php if ($comment->comment_approved == '0') : ?>
 						<div class="comment-awaiting-moderation">
-							<?php _e('Your comment is awaiting moderation.', "nsc-blog"); ?>
+							<?php _e('Your comment is awaiting moderation.', "rj-bst"); ?>
 						</div>
 					<?php endif; ?>
 
@@ -356,7 +356,7 @@ function nsc_blog_breadcrumb1() {
 
 // Add custom fields to user profile
 function custom_user_profile_fields($user) { ?>
-    <h3><?php _e('Social Media Links', "nsc-blog"); ?></h3>
+    <h3><?php _e('Social Media Links', "rj-bst"); ?></h3>
 
     <table class="form-table">
 		<?php
@@ -369,7 +369,7 @@ function custom_user_profile_fields($user) { ?>
 
 			foreach ($social_links as $label => $input) { ?>
 				<tr>
-					<th><label for="<?php echo esc_attr($input); ?>"><?php _e($label, "nsc-blog"); ?></label></th>
+					<th><label for="<?php echo esc_attr($input); ?>"><?php _e($label, "rj-bst"); ?></label></th>
 					<td>
 						<input type="text" name="<?php echo esc_attr($input); ?>" id="<?php echo esc_attr($input); ?>" value="<?php echo esc_attr(get_the_author_meta($input, $user->ID)); ?>" class="regular-text" />
 					</td>
@@ -377,14 +377,14 @@ function custom_user_profile_fields($user) { ?>
 			<?php } ?>
 
 			<tr>
-				<th><label for="nsc_blog_user_designation"><?php _e("Designaion", "nsc-blog"); ?></label></th>
+				<th><label for="nsc_blog_user_designation"><?php _e("Designaion", "rj-bst"); ?></label></th>
 				<td>
 					<input type="text" name="nsc_blog_user_designation" id="nsc_blog_user_designation" value="<?php echo esc_attr(get_the_author_meta('nsc_blog_user_designation', $user->ID)); ?>" class="regular-text" />
 				</td>
 			</tr>
 
 			<tr>
-				<th><label for="nsc_blog_user_location"><?php _e("Location", "nsc-blog"); ?></label></th>
+				<th><label for="nsc_blog_user_location"><?php _e("Location", "rj-bst"); ?></label></th>
 				<td>
 					<input type="text" name="nsc_blog_user_location" id="nsc_blog_user_location" value="<?php echo esc_attr(get_the_author_meta('nsc_blog_user_location', $user->ID)); ?>" class="regular-text" />
 				</td>
@@ -423,8 +423,8 @@ function nsc_blog_register_post_type_special_report() {
 	register_post_type('special_report',
 		array(
 			'labels'      => array(
-				'name'          => __('Special Report', "nsc-blog"),
-				'singular_name' => __('Special Reports', "nsc-blog"),
+				'name'          => __('Special Report', "rj-bst"),
+				'singular_name' => __('Special Reports', "rj-bst"),
 			),
 				'public'      => true,
 				'has_archive' => true,
@@ -435,8 +435,8 @@ add_action('init', 'nsc_blog_register_post_type_special_report');
 
 function nsc_blog_register_custom_taxonomy() {
 	$labels = array(
-			 'name'                       => _x( 'Categories', 'Special Report', "nsc-blog" ),
-			 'singular_name'              => _x( 'Category', 'Special Reports', "nsc-blog" ),
+			 'name'                       => _x( 'Categories', 'Special Report', "rj-bst" ),
+			 'singular_name'              => _x( 'Category', 'Special Reports', "rj-bst" ),
 	 );
 	$args = array(
 			'hierarchical'          => true,
@@ -606,8 +606,8 @@ function nsc_blog_register_post_type_videos_interviews() {
     register_post_type('videos_interviews',
         array(
             'labels'      => array(
-                'name'          => __('Videos & Interviews', "nsc-blog"),
-                'singular_name' => __('Video & Interview', "nsc-blog"),
+                'name'          => __('Videos & Interviews', "rj-bst"),
+                'singular_name' => __('Video & Interview', "rj-bst"),
             ),
             'public'      => true,
             'has_archive' => true,
@@ -621,26 +621,26 @@ add_action('init', 'nsc_blog_register_post_type_videos_interviews');
 
 function nsc_blog_register_custom_taxonomy_videos_interviews() {
     $labels = array(
-        'name'                       => _x('Categories', 'Taxonomy General Name', "nsc-blog"),
-        'singular_name'              => _x('Category', 'Taxonomy Singular Name', "nsc-blog"),
-        'menu_name'                  => __('Categories', "nsc-blog"),
-        'all_items'                  => __('All Categories', "nsc-blog"),
-        'parent_item'                => __('Parent Category', "nsc-blog"),
-        'parent_item_colon'          => __('Parent Category:', "nsc-blog"),
-        'new_item_name'              => __('New Category Name', "nsc-blog"),
-        'add_new_item'               => __('Add New Category', "nsc-blog"),
-        'edit_item'                  => __('Edit Category', "nsc-blog"),
-        'update_item'                => __('Update Category', "nsc-blog"),
-        'view_item'                  => __('View Category', "nsc-blog"),
-        'separate_items_with_commas' => __('Separate categories with commas', "nsc-blog"),
-        'add_or_remove_items'        => __('Add or remove categories', "nsc-blog"),
-        'choose_from_most_used'      => __('Choose from the most used', "nsc-blog"),
-        'popular_items'              => __('Popular Categories', "nsc-blog"),
-        'search_items'               => __('Search Categories', "nsc-blog"),
-        'not_found'                  => __('Not Found', "nsc-blog"),
-        'no_terms'                   => __('No categories', "nsc-blog"),
-        'items_list'                 => __('Categories list', "nsc-blog"),
-        'items_list_navigation'      => __('Categories list navigation', "nsc-blog"),
+        'name'                       => _x('Categories', 'Taxonomy General Name', "rj-bst"),
+        'singular_name'              => _x('Category', 'Taxonomy Singular Name', "rj-bst"),
+        'menu_name'                  => __('Categories', "rj-bst"),
+        'all_items'                  => __('All Categories', "rj-bst"),
+        'parent_item'                => __('Parent Category', "rj-bst"),
+        'parent_item_colon'          => __('Parent Category:', "rj-bst"),
+        'new_item_name'              => __('New Category Name', "rj-bst"),
+        'add_new_item'               => __('Add New Category', "rj-bst"),
+        'edit_item'                  => __('Edit Category', "rj-bst"),
+        'update_item'                => __('Update Category', "rj-bst"),
+        'view_item'                  => __('View Category', "rj-bst"),
+        'separate_items_with_commas' => __('Separate categories with commas', "rj-bst"),
+        'add_or_remove_items'        => __('Add or remove categories', "rj-bst"),
+        'choose_from_most_used'      => __('Choose from the most used', "rj-bst"),
+        'popular_items'              => __('Popular Categories', "rj-bst"),
+        'search_items'               => __('Search Categories', "rj-bst"),
+        'not_found'                  => __('Not Found', "rj-bst"),
+        'no_terms'                   => __('No categories', "rj-bst"),
+        'items_list'                 => __('Categories list', "rj-bst"),
+        'items_list_navigation'      => __('Categories list navigation', "rj-bst"),
     );
     $args = array(
         'hierarchical'          => true,
@@ -768,4 +768,11 @@ function nsc_enqueue_popup_script() {
 }
 add_action('wp_footer', 'nsc_enqueue_popup_script');
 
+
+$social_icons = array('fontello-facebook', 'fontello-twitter', 'fontello-youtube-play', 'fontello-instagram');
+$social_url = array('www.facebook.com', 'www.twitter.com', 'www.youtube.com', 'www.instagram.com' );
+for ($i=0; $i < count($social_icons) ; $i++) {
+    set_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_url[$i]);
+    set_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i]);
+ }
 ?>
