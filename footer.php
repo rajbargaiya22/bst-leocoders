@@ -183,9 +183,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 						});
 					});
 
-
-
 				});
+
+
+			
 
 		</script>
 

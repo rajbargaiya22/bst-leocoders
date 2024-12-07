@@ -15,7 +15,12 @@ function nsc_blog_enqueue_scripts() {
 	wp_enqueue_style( 'header-footer', get_template_directory_uri(). '/assets/css/header-footer.css' );
 
 	wp_enqueue_script('leo-device-js', get_template_directory_uri() . '/assets/js/device.min.js', array('jquery'), null, false);
-	wp_enqueue_script('nsc-custom-js', get_template_directory_uri() . '/assets/js/nsc-custom.js', array('jquery'), false, false);
+	wp_enqueue_script('nsc-custom-js', get_template_directory_uri() . '/assets/js/nsc-custom.js', array('jquery'), null, true);
+
+
+    wp_localize_script('nsc-custom-js', 'load_more_params', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ));
 	
 	 if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	 	wp_enqueue_script( 'comment-reply' );
@@ -352,45 +357,90 @@ function save_custom_user_profile_fields($user_id) {
 add_action('personal_options_update', 'save_custom_user_profile_fields');
 add_action('edit_user_profile_update', 'save_custom_user_profile_fields');
 
-//  regster the post type
-function rj_leo_bst_register_post_type() {
-    $posts_types = array('Testimonial');
 
-    for ($i=0; $i < count($posts_types) ; $i++) { 
-        register_post_type((strtolower($posts_types[$i])),
+function rj_leo_bst_register_post_type() {
+    $posts_types = array(
+        'Testimonial' => array(),
+        'Teams' => array('designation', 'facebook', 'twitter', 'youtube', 'instagram'),
+        'Event' => array(),
+    );
+
+    foreach ($posts_types as $post_type => $metafields) {
+        register_post_type(strtolower($post_type),
             array(
-                'labels'      => array(
-                    'name'          => __($posts_types[$i], "rj-bst"),
-                    'singular_name' => __($posts_types[$i].'s', "rj-bst"),
+                'labels' => array(
+                    'name'          => __($post_type . 's', 'rj-bst'),
+                    'singular_name' => __($post_type, 'rj-bst'),
                 ),
-                    'public'      => true,
-                    'has_archive' => true,
+                'public'      => true,
+                'has_archive' => true,
+                'supports'    => array('title', 'editor', 'thumbnail'), // Customize as needed
             )
         );
     }
 }
 add_action('init', 'rj_leo_bst_register_post_type');
 
+function rj_leo_bst_add_custom_metabox() {
+    $posts_types = array(
+        'Teams' => array('designation', 'facebook', 'twitter', 'youtube', 'instagram'),
+    );
 
-//  Add roles
-function add_custom_roles() {
-	$roles = array(
-					'Photographers' => 'photographers',
-				);
-
-		foreach ($roles as $label => $role) {
-			add_role(
-			    $role,
-			    __($label),
-			    array(
-			        'read'         => true,
-			        'edit_posts'   => false,
-			        'delete_posts' => false,
-			    )
-			);
-		}
+    foreach ($posts_types as $post_type => $metafields) {
+        add_meta_box(
+            strtolower($post_type) . '_metabox',
+            __($post_type . ' Metafields', 'rj-bst'),
+            'rj_leo_bst_custom_metafield_callback',
+            strtolower($post_type),
+            'normal',
+            'default'
+        );
+    }
 }
-add_action('init', 'add_custom_roles');
+add_action('add_meta_boxes', 'rj_leo_bst_add_custom_metabox');
+
+function rj_leo_bst_custom_metafield_callback($post) {
+    $posts_types = array(
+        'Teams' => array('designation', 'facebook', 'twitter', 'youtube', 'instagram'),
+    );
+
+    foreach ($posts_types as $post_type => $fields) {
+        foreach ($fields as $field ) {
+            $meta_key = strtolower($post_type . '_' . $field);
+            $meta_value = get_post_meta($post->ID, $meta_key, true); ?>
+
+            <p>
+                <label for="<?php echo esc_attr($meta_key); ?>">
+                    <?php echo ucfirst($field); ?>
+                </label>
+                <input type="text" 
+                    id="<?php echo esc_attr($meta_key); ?>" 
+                    name="<?php echo esc_attr($meta_key); ?>" 
+                    value="<?php echo esc_attr($meta_value); ?>" 
+                    >
+                </p>
+           <?php } } 
+}
+
+function rj_leo_bst_save_custom_metafield($post_id) {
+    $posts_types = array(
+        'Teams' => array('designation', 'facebook', 'twitter', 'youtube', 'instagram'),
+    );
+
+    
+    foreach ($posts_types as $post_type => $fields) {
+        foreach ($fields as $field ) {
+            $meta_key = strtolower($post_type . '_' . $field);
+            if (isset($_POST[$meta_key])) {
+                update_post_meta($post_id, $meta_key, sanitize_text_field($_POST[$meta_key]));
+            }
+        }
+    }
+}
+add_action('save_post', 'rj_leo_bst_save_custom_metafield');
+
+
+
 
 
 //
@@ -688,5 +738,72 @@ function nsc_enqueue_popup_script() {
     <?php
 }
 add_action('wp_footer', 'nsc_enqueue_popup_script');
+
+
+function load_more_events() {
+    $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+    $posts_per_page = isset($_POST['posts_per_page']) ? intval($_POST['posts_per_page']) : 8;
+
+    $args = array(
+        'post_type'      => 'event',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_per_page,
+        'paged'          => $page,
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        $i = ($page - 1) * $posts_per_page + 1; // Adjust for pagination
+        while ($query->have_posts()) {
+            $query->the_post();
+            
+            $image_id = get_post_thumbnail_id();
+            $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+            $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+            ?>
+
+            <div class="js-isotope__item1 category-<?php echo esc_attr($i); ?>">
+                <div class="__item" data-x="1" data-y="1">
+                    <figure class="__image">
+                        <img 
+                            class="lazy1" 
+                            src="<?php echo esc_url($image_url); ?>" 
+                            data-src="<?php echo esc_url($image_url); ?>" 
+                            alt="<?php echo esc_attr($image_alt ? $image_alt : get_the_title()); ?>" 
+                            title="<?php echo esc_attr($image_alt ? $image_alt : get_the_title()); ?>" 
+                        />
+                    </figure>
+
+                    <div class="__content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="h4 __title"><?php echo esc_html(get_the_title()); ?></div>
+                            </div>
+
+                            <div class="col-auto">
+                                <a class="__link" href="<?php echo esc_url($image_url); ?>" data-fancybox="gallery-masonry">
+                                    <i class="fontello-resize"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+            $i++;
+        }
+    } else {
+        echo 'no_more_posts';
+    }
+
+    wp_reset_postdata();
+    wp_die();
+}
+add_action('wp_ajax_load_more_events', 'load_more_events');
+add_action('wp_ajax_nopriv_load_more_events', 'load_more_events');
+
+
 
 ?>

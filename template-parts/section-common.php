@@ -21,7 +21,7 @@
                 <p class="text-white">
                     <?php echo wp_kses_post(get_theme_mod('rj_leo_bst_common_description', 'Blue Sky Tree is ready to bring your vision to life with intelligent vending and automation solutions. Partner with us today and redefine convenience for your customers.')); ?>
                 </p>
-                <h3 class="text-white">
+                <h3 class="text-white mb-0">
                     <?php echo wp_kses_post(get_theme_mod('rj_leo_bst_common_contact_head', 'Contact Us Now')); ?>
                 </h3>
                 <a href="tel:<?php echo esc_attr(get_theme_mod('rj_leo_bst_common_contact_no1', '+65 9070 7168')); ?>" class="contact-btn">

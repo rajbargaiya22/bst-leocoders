@@ -13,11 +13,6 @@
       'posts_per_page' => 4,
     );
      $query = new WP_Query($args);
-
-     // echo "<pre class='text-white'>";
-     // print_r($query);
-     // echo "</pre>";
-
      if ( $query->have_posts() ) {
      while ($query->have_posts()) : $query->the_post();?>
 
