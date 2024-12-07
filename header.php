@@ -78,26 +78,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<li>
 						
 						<div class="__label">
-							<?php echo esc_html(get_theme_mod('rj_bst_leo_header_address_head', 'Address'));?>
+							<?php echo esc_html(get_theme_mod('rj_leo_bst_header_address_head', 'Address'));?>
 						</div>
 						<p>
-							<?php echo esc_html(get_theme_mod('rj_bst_leo_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
+							<?php echo esc_html(get_theme_mod('rj_leo_bst_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
 						</p>
 					</li>
 
 					<li>
-						<div class="__label"><?php echo esc_html(get_theme_mod('rj_bst_leo_header_phone_head', 'Phone'));?> </div>
+						<div class="__label"><?php echo esc_html(get_theme_mod('rj_leo_bst_header_phone_head', 'Phone'));?> </div>
 						<p>
-							<a href="tel: <?php echo esc_attr(get_theme_mod('rj_bst_leo_header_phone_num', '+65 9171 7296'));?>">
-								<?php echo esc_html(get_theme_mod('rj_bst_leo_header_phone_num', '+65 9171 7296'));?>
+							<a href="tel: <?php echo esc_attr(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?>">
+								<?php echo esc_html(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?>
 							</a>
 						</p>
 					</li>
 
 					<li>
-					<div class="__label"><?php echo esc_html(get_theme_mod('rj_bst_leo_header_social_head', 'Social'));?> </div>
+					<div class="__label"><?php echo esc_html(get_theme_mod('rj_leo_bst_header_social_head', 'Social'));?> </div>
 
-					<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4); 
+					<?php $socail_icon_number = get_theme_mod('rj_leo_bst_header_social_icon_num', 4); 
 						$social_icons = array('fontello-facebook', 'fontello-twitter', 'fontello-youtube-play', 'fontello-instagram');
 						$social_url = array('www.facebook.com', 'www.twitter.com', 'www.youtube.com', 'www.instagram.com' );
 					?>
@@ -109,8 +109,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 								for ($i=0; $i < $socail_icon_number ; $i++) { ?>
 									<li>
-										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
-											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
 										</a>
 									</li>		
 								<?php } ?>
@@ -126,9 +126,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 				<div class="top-bar__action">
-					<a class="custom-btn" href="#">Get in Touch</a>
+					<a class="custom-btn" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_header_btn_url', '#')); ?>">
+						<?php echo esc_html(get_theme_mod('rj_leo_bst_header_btn_text', 'Get in Touch')); ?>
+					</a>
 
-					<a class="custom-btn custom-btn--big custom-btn--s2" href="#">Get in Touch</a>
+					<a class="custom-btn custom-btn--big custom-btn--s2" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_header_btn_url', '#')); ?>">
+						<?php echo esc_html(get_theme_mod('rj_leo_bst_header_btn_text', 'Get in Touch')); ?>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -141,19 +145,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="top-bar__contacts">
 						<ul>
 							<li>
-							<?php echo esc_html(get_theme_mod('rj_bst_leo_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
+							<?php echo esc_html(get_theme_mod('rj_leo_bst_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
 								
 							</li>
 
 							<li>
-								<a href="tel: <?php echo esc_attr(get_theme_mod('rj_bst_leo_header_address_head', '+65 9171 7296'));?>">
-									<?php echo esc_html(get_theme_mod('rj_bst_leo_header_address_head', '+65 9171 7296'));?>
+								<a href="tel: <?php echo esc_attr(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?>">
+									<?php echo esc_html(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?>
 								</a>
 							</li>
 
 							<li>
-								<a href="mailto:<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_email_add', 'blueskytree1@gmail.com'));?>">
-									<?php echo esc_html(get_theme_mod('rj_bst_leo_header_email_add', 'blueskytree1@gmail.com'));?>
+								<a href="mailto:<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_email_add', 'blueskytree1@gmail.com'));?>">
+									<?php echo esc_html(get_theme_mod('rj_leo_bst_header_email_add', 'blueskytree1@gmail.com'));?>
 								</a>
 							</li>
 						</ul>
@@ -167,11 +171,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<!-- start social buttons -->
 								<div class="s-btns s-btns--gray">
 									<ul class="d-flex flex-row flex-wrap justify-content-center align-items-center">
-									<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4);  ?>
+									<?php $socail_icon_number = get_theme_mod('rj_leo_bst_header_social_icon_num', 4);  ?>
 										<?php for ($i=0; $i < $socail_icon_number; $i++) { ?>
 											<li>
-											<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
-											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+											<a class="f" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
 										</a>
 											</li>		
 										<?php } ?>

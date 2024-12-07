@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: NSC Events
+* Template Name: NSC Blog
 *
 *
 * @package rj-bst
@@ -41,6 +41,263 @@ get_header(); ?>
         <section class="section">
             <div class="container">
                 <div class="row">
+
+                <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                        <div class="spacer py-5 d-md-none"></div>
+
+                        <!-- start sidebar -->
+                        <aside class="sidebar">
+                            <!-- start widget -->
+                            <div class="widget widget--search">
+                                <form action="#">
+                                    <button type="submit" role="button"><i class="fontello-search"></i></button>
+
+                                    <input class="textfield" type="text" value="" placeholder="Search" name="s" />
+                                </form>
+                            </div>
+                            <!-- end widget -->
+
+                            <!-- start widget -->
+                            <div class="widget widget--categories">
+                                <h4 class="widget-title">Category</h4>
+
+                                <ul class="list">
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">Healthy Energy Bars<span>1</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">Gluten-Free Snacks<span>2</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">Kosher Snacks<span>3</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">Healthy Snacks<span>4</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">Eco Vending<span>5</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end widget -->
+
+                            <!-- start widget -->
+                            <div class="widget widget--posts">
+                                <h4 class="widget-title">Recent posts</h4>
+
+                                <div>
+                                    <article>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto __image-wrap">
+                                                <figure class="__image">
+                                                    <a href="#">
+                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/5.jpg" alt="demo" />
+                                                    </a>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col">
+                                                <h5 class="__title"><a href="#">Corparate Problem in Vending Business</a></h5>
+
+                                                <div class="post-meta">
+                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto __image-wrap">
+                                                <figure class="__image">
+                                                    <a href="#">
+                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/3.jpg" alt="demo" />
+                                                    </a>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col">
+                                                <h5 class="__title"><a href="#">Snack for Machines in Markets</a></h5>
+
+                                                <div class="post-meta">
+                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article>
+                                        <div class="row no-gutters">
+                                            <div class="col">
+                                                <h5 class="__title"><a href="#">Vending Business Future of Snack</a></h5>
+
+                                                <div class="post-meta">
+                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto __image-wrap">
+                                                <figure class="__image">
+                                                    <a href="#">
+                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/4.jpg" alt="demo" />
+                                                    </a>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col">
+                                                <h5 class="__title"><a href="#">Vending Solutions</a></h5>
+
+                                                <div class="post-meta">
+                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- end widget -->
+
+                            <!-- start widget -->
+                            <div class="widget widget--archive">
+                                <h4 class="widget-title">Archive</h4>
+
+                                <ul class="list">
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">January<span>2019</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">February<span>2019</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">March<span>2019</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">April<span>2019</span></a>
+                                    </li>
+
+                                    <li class="list__item">
+                                        <a class="list__item__link" href="#">May<span>2019</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end widget -->
+
+                            <!-- start widget -->
+                            <div class="widget widget--tags">
+                                <h4 class="widget-title">Tags</h4>
+
+                                <div class="tags-list">
+                                    <ul class="tags-list__list">
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Vending</a></li>
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Snack Machine</a></li>
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Ingredients</a></li>
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Coffe Rent</a></li>
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Vending Shop</a></li>
+                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Business</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end widget -->
+
+                            <!-- start widget -->
+                            <div class="widget widget--instagram">
+                                <h4 class="widget-title"><i class="fontello-instagram"></i># VendGo</h4>
+
+                                <!-- start instafeed -->
+                                <div class="instafeed">
+                                    <div class="row">
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/3.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/4.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/2.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/1.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/5.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+
+                                        <!-- start item -->
+                                        <div class="col-4 col-sm-3 col-md-4">
+                                            <div class="__item">
+                                                <figure class="__image">
+                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/6.jpg" alt="demo" />
+
+                                                    <a href="javascript:void(0);"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                </div>
+                                <!-- end instafeed -->
+                            </div>
+                            <!-- end widget -->
+                        </aside>
+                        <!-- end sidebar -->
+
+                    </div>
+
                     <div class="col-12 col-md-7 col-lg-8 col-xl-9">
 
                         <!-- start posts -->
@@ -468,261 +725,6 @@ get_header(); ?>
 
                     </div>
 
-                    <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                        <div class="spacer py-5 d-md-none"></div>
-
-                        <!-- start sidebar -->
-                        <aside class="sidebar">
-                            <!-- start widget -->
-                            <div class="widget widget--search">
-                                <form action="#">
-                                    <button type="submit" role="button"><i class="fontello-search"></i></button>
-
-                                    <input class="textfield" type="text" value="" placeholder="Search" name="s" />
-                                </form>
-                            </div>
-                            <!-- end widget -->
-
-                            <!-- start widget -->
-                            <div class="widget widget--categories">
-                                <h4 class="widget-title">Category</h4>
-
-                                <ul class="list">
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">Healthy Energy Bars<span>1</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">Gluten-Free Snacks<span>2</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">Kosher Snacks<span>3</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">Healthy Snacks<span>4</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">Eco Vending<span>5</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- end widget -->
-
-                            <!-- start widget -->
-                            <div class="widget widget--posts">
-                                <h4 class="widget-title">Recent posts</h4>
-
-                                <div>
-                                    <article>
-                                        <div class="row no-gutters">
-                                            <div class="col-auto __image-wrap">
-                                                <figure class="__image">
-                                                    <a href="#">
-                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/5.jpg" alt="demo" />
-                                                    </a>
-                                                </figure>
-                                            </div>
-
-                                            <div class="col">
-                                                <h5 class="__title"><a href="#">Corparate Problem in Vending Business</a></h5>
-
-                                                <div class="post-meta">
-                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-
-                                    <article>
-                                        <div class="row no-gutters">
-                                            <div class="col-auto __image-wrap">
-                                                <figure class="__image">
-                                                    <a href="#">
-                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/3.jpg" alt="demo" />
-                                                    </a>
-                                                </figure>
-                                            </div>
-
-                                            <div class="col">
-                                                <h5 class="__title"><a href="#">Snack for Machines in Markets</a></h5>
-
-                                                <div class="post-meta">
-                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-
-                                    <article>
-                                        <div class="row no-gutters">
-                                            <div class="col">
-                                                <h5 class="__title"><a href="#">Vending Business Future of Snack</a></h5>
-
-                                                <div class="post-meta">
-                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-
-                                    <article>
-                                        <div class="row no-gutters">
-                                            <div class="col-auto __image-wrap">
-                                                <figure class="__image">
-                                                    <a href="#">
-                                                        <img class="lazy" src="img/blank.gif" data-src="img/posts_img/4.jpg" alt="demo" />
-                                                    </a>
-                                                </figure>
-                                            </div>
-
-                                            <div class="col">
-                                                <h5 class="__title"><a href="#">Vending Solutions</a></h5>
-
-                                                <div class="post-meta">
-                                                    <time class="post-meta__item __date-post">May 21, 2019</time>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <!-- end widget -->
-
-                            <!-- start widget -->
-                            <div class="widget widget--archive">
-                                <h4 class="widget-title">Archive</h4>
-
-                                <ul class="list">
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">January<span>2019</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">February<span>2019</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">March<span>2019</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">April<span>2019</span></a>
-                                    </li>
-
-                                    <li class="list__item">
-                                        <a class="list__item__link" href="#">May<span>2019</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- end widget -->
-
-                            <!-- start widget -->
-                            <div class="widget widget--tags">
-                                <h4 class="widget-title">Tags</h4>
-
-                                <div class="tags-list">
-                                    <ul class="tags-list__list">
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Vending</a></li>
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Snack Machine</a></li>
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Ingredients</a></li>
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Coffe Rent</a></li>
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Vending Shop</a></li>
-                                        <li class="tags-list__item"><a class="tags-list__link" href="#">Business</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- end widget -->
-
-                            <!-- start widget -->
-                            <div class="widget widget--instagram">
-                                <h4 class="widget-title"><i class="fontello-instagram"></i># VendGo</h4>
-
-                                <!-- start instafeed -->
-                                <div class="instafeed">
-                                    <div class="row">
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/3.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/4.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/2.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/1.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/5.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/6.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-                                    </div>
-                                </div>
-                                <!-- end instafeed -->
-                            </div>
-                            <!-- end widget -->
-                        </aside>
-                        <!-- end sidebar -->
-
-                    </div>
                 </div>
             </div>
         </section>

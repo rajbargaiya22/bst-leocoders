@@ -13,14 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 	<main id="nsc-primary">
 		<div class="custom-container">
-			<?php get_template_part('template-parts/home/leo-sec1'); ?>		
-			<?php get_template_part('template-parts/home/leo-sec2'); ?>		
-			<?php get_template_part('template-parts/home/leo-keyfact'); ?>		
-			<?php get_template_part('template-parts/home/leo-sec3'); ?>		
-			<?php get_template_part('template-parts/home/leo-sec4'); ?>		
-			<?php get_template_part('template-parts/home/leo-sec5'); ?>		
-			<?php get_template_part('template-parts/home/leo-sec6'); ?>	
-			<?php get_template_part('template-parts/home/leo-sec7'); ?>	
+			<?php  $home_section = array('section-slider', 'section-about-us', 'section-keyfact', 'section-features', 'section-testimonial', 'section-youtube-video', 'section-partners', 'section-faq');
+
+			for ($i=0; $i < count($home_section) ; $i++) {  
+				get_template_part('template-parts/home/'.$home_section[$i]); 
+			 } ?>		
 		</div>
 	</main>
 <?php

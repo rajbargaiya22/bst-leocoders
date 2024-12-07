@@ -7,10 +7,12 @@
 ?>
 
 <section class="stay-connected container section-heading ">
-        <h2 class="__title">STAY CONNECTED</h2>
+        <h2 class="__title">
+        <?php echo esc_html(get_theme_mod('rj_leo_bst_video_title', 'STAY CONNECTED')); ?>
+        </h2>
         <div class="card-container">
             <div class="card">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Dummy Video" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Dummy Video" frameborder="0" allowfullscreen></iframe>
                 <div class="content">
                     <p>Each teriyaki sauce brings a little something special to the (dinner) table. Which one is your fave… or is it both?! #Teriyaki #Kikkoman</p>
                     <span></span>
@@ -24,7 +26,7 @@
                 </div>
             </div>
             <div class="card">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Dummy Video" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Dummy Video" frameborder="0" allowfullscreen></iframe>
                 <div class="content">
                     <p>You know we're all about our kitchen creations having that umami flair. Check out this Soy Butter recipe!</p>
                     <div class="author-icon">

@@ -169,15 +169,23 @@ h1,h2,h3,h4,h5,h6{
   text-align: justify;
 }
 
-/* .brands-list .js-slick{
-  display: flex;
-  align-items: center;
-} */
 #start-screen__slider .slick-list, .start-screen__slide .__bg{
   min-height: 80vh;
 }
 #start-screen .container{
   margin-top: 60px;
+}
+.common-section a.contact-btn{
+  color: #fff;
+}
+.common-section .container{
+  background-color: #1b7a94;
+  text-align: center;
+  padding: 40px 20px
+}
+.common-section .container p{
+  max-width: 600px;
+  margin: auto;
 }
 .footer__item :is(p, a) {
   font-weight: 400;

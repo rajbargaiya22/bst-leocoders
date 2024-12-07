@@ -7,7 +7,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-} ?>
+} 
+	get_template_part('template-parts/section-common'); 
+?>
+
+	
+
 	  <footer class="footer footer--s2">
 	<div class="container">
 		<div class="footer__line footer__line--first">
@@ -20,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</a>
 						</h4>
 						<p>
-							<?php echo esc_html(get_theme_mod('rj_bst_leo_footer_desc', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies vel nisi ac malesuada.')); ?>
+							<?php echo esc_html(get_theme_mod('rj_leo_bst_footer_desc', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies vel nisi ac malesuada.')); ?>
 						</p>
 					</div>
 				</div>
@@ -30,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="col-12 col-md-6">
 							<div class="footer__item">
 								<h4 style="color:#fff">
-									<?php echo esc_html(get_theme_mod('rj_bst_leo_footer_head2', 'Quick Links')); ?>
+									<?php echo esc_html(get_theme_mod('rj_leo_bst_footer_head2', 'Quick Links')); ?>
 								</h4>
 								<nav class="footer__navigation">
 								<?php wp_nav_menu(
@@ -40,22 +45,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 										'theme_location' => 'primary-menu',
 									)
 								); ?>
-
-									<!-- <ul class="ps-0">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">Our Story</a></li>
-										<li><a href="#">Products</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">Customers</a></li>
-										<li><a href="#">Events</a></li>
-										<li><a href="#">Insights</a></li>
-									</ul> -->
 								</nav>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
 							<div class="footer__item">
-								<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_bst_leo_footer_head3', 'Help')); ?></h4>
+								<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_leo_bst_footer_head3', 'Help')); ?></h4>
 								<nav class="footer__navigation">
 								<?php wp_nav_menu(
 									array(
@@ -73,14 +68,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="col-12 col-md-5 col-lg-3">
 					<div class="footer__item">
-						<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_bst_leo_footer_head4', 'Get In Touch')); ?></h4>
+						<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_leo_bst_footer_head4', 'Get In Touch')); ?></h4>
 						<address class="footer__address">
 							<p>
-								<?php echo esc_html(get_theme_mod('rj_bst_leo_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
+								<?php echo esc_html(get_theme_mod('rj_leo_bst_header_address_text', '3 Ang Mo Kio Street 62 #06-06 Singapore 569139'));?>
 							</p>
-							<p><a href="tel:<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_phone_num', '+65 9171 7296'));?>"><?php echo esc_html(get_theme_mod('rj_bst_leo_header_phone_num', '+65 9171 7296'));?></a></p>
-							<p><a href="mailto:<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_email_add', 'blueskytree1@gmail.com'));?>">
-								<?php echo esc_html(get_theme_mod('rj_bst_leo_header_email_add', 'blueskytree1@gmail.com'));?>
+							<p><a href="tel:<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?>"><?php echo esc_html(get_theme_mod('rj_leo_bst_header_phone_num', '+65 9171 7296'));?></a></p>
+							<p><a href="mailto:<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_email_add', 'blueskytree1@gmail.com'));?>">
+								<?php echo esc_html(get_theme_mod('rj_leo_bst_header_email_add', 'blueskytree1@gmail.com'));?>
 							</a>
 						</p>
 						</address>
@@ -89,17 +84,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				
 				<div class="col-12 col-md-5 col-lg-2">
 					<div class="footer__item">
-					<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_bst_leo_footer_head5', 'Social Network')); ?></h4>
+					<h4 style="color:#fff"><?php echo esc_html(get_theme_mod('rj_leo_bst_footer_head5', 'Social Network')); ?></h4>
 						<div class="s-btns s-btns--white">
-						<?php $socail_icon_number = get_theme_mod('rj_bst_leo_header_social_icon_num', 4); ?>
+						<?php $socail_icon_number = get_theme_mod('rj_leo_bst_header_social_icon_num', 4); ?>
 							<ul class="d-flex flex-row flex-wrap align-items-center ps-0">
 								<?php 
 									$social_icons = array('fontello-facebook', 'fontello-twitter', 'fontello-youtube-play', 'fontello-instagram');
 									$social_url = array('www.facebook.com', 'www.twitter.com', 'www.youtube.com', 'www.instagram.com' );
 									for ($i=0; $i < $socail_icon_number; $i++) { ?>
 									<li>
-										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_bst_leo_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
-											<i class="<?php echo esc_attr(get_theme_mod('rj_bst_leo_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
+										<a class="f" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_header_social_icon_url'.$i, $social_icons[$i])) ?>" target="_blank">
+											<i class="<?php echo esc_attr(get_theme_mod('rj_leo_bst_header_social_icon'.$i, $social_icons[$i])) ?>"></i>
 										</a>
 									</li>		
 								<?php } ?>
@@ -145,7 +140,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					]
 				});
 			
-				$('.review--slider').slick({
+				$('.review--slider1').slick({
 					dots: true, 
 					arrows: false,
 					autoplay: true, 

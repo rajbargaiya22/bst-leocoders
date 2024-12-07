@@ -10,12 +10,16 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="section-heading section-heading--center">
-					<h5 class="__subtitle">Features</h5>
+					<h5 class="__subtitle">
+						<?php echo get_theme_mod('rj_leo_bst_features_subtitle', 'Features'); ?> 
+					</h5>
 
-					<h2 class="__title">We are the Best on Vending</h2>
+					<h2 class="__title">
+						<?php echo get_theme_mod('rj_leo_bst_features_title', 'We are the Best on Vending'); ?> 
+					</h2>
 
 					<p>
-						Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth
+						<?php echo get_theme_mod('rj_leo_bst_features_desc', 'Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth'); ?> 
 					</p>
 				</div>
 

@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: NSC Events
+* Template Name: NSC Events1
 *
 *
 * @package rj-bst
@@ -38,8 +38,12 @@ get_header(); ?>
 				<link rel="stylesheet" href="css/style.min.css" type="text/css">
 
 				<!-- start section -->
+				 
 				<section class="section">
 					<div class="container">
+					<h2>
+						Upcoming Events
+					</h2>
 						<div class="row">
 							<div class="col-12">
 
@@ -273,7 +277,15 @@ get_header(); ?>
 						</div>
 					</div>
 				</section>
+
 				<!-- end section -->
+				<section class="section">
+					<div class="container">
+						<h2>
+							Past Events
+						</h2>
+					</div>
+			</section>
 			</main>
 			<!-- end main -->
 				
