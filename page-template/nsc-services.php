@@ -8,28 +8,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-get_header(); ?>
-
-    <!-- start hero -->
-    <div
-        id="hero"
-        class="hero jarallax"
-        data-speed="0.6"
-        data-img-position="50% 48%"
-        style="background-image: url(img/hero_img/1.jpg);background-position: 15% center;background-color: #2d69b9">
-
-        <div class="hero__inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-11 col-sm-12">
-                        <h4 class="hero__subtitle">VendGo</h4>
-                        <h1 class="hero__title">Services</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end hero -->
+get_header(); 
+echo nsc_blog_breadcrumb();
+?>
 
     <!-- start main -->
     <main role="main">

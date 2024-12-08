@@ -10,7 +10,9 @@
  * @package rj-bst
  */
 
-get_header(); ?>
+get_header();
+echo nsc_blog_breadcrumb();
+?>
 
 <?php do_action( 'nsc_blog_page_post_top' ); ?>
 

@@ -11,12 +11,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-heading section-heading--center">
-                    <h5 class="__subtitle">Our family</h5>
+                    <h5 class="__subtitle">
+                        <?php echo esc_html(get_theme_mod('rj_leo_bst_team_subtitle', 'Our family')); ?>
+                    </h5>
 
-                    <h2 class="__title">VendGo <span>Dream Team</span></h2>
+                    <h2 class="__title">
+                        <?php echo get_theme_mod('rj_leo_bst_team_title', 'VendGo <span>Dream Team</span>'); ?>
+                    </h2>
 
                     <p>
-                        Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth
+                        <?php echo esc_html(get_theme_mod('rj_leo_bst_team_desc', 'Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth  ')); ?>
                     </p>
                 </div>
 
@@ -40,20 +44,20 @@
 
                               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                                 <div class="__item">
-                                    <figure class="__image">
-                                        <img class="lazy1" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" data-src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="demo" />
-                                    </figure>
+                                    <div class="team-image-content">
+                                        <figure class="__image">
+                                            <img class="lazy1" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" data-src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="demo" />
+                                        </figure>
+                                        
+                                        <p class="team-content">
+                                            <?php echo get_the_content(); ?>
+                                        </p>
+                                    </div>
 
                                     <div class="__content">
                                         <div class="__position"><?php echo get_the_title(); ?></div>
 
                                         <h4 class="__name"><?php echo get_post_meta($post->ID, 'teams_designation', true); ?></h4>
-
-                                        <?php /*
-                                        <p>
-                                            <?php echo get_the_content(); ?>
-                                        </p>
-                                        */ ?>
 
                                         <!-- start social buttons -->
                                         <div class="s-btns s-btns--gray">

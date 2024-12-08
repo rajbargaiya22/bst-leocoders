@@ -209,23 +209,28 @@ function nsc_blog_custom_comment_list($comment, $args, $depth) {
     <?php
 }
 
-function nsc_blog_breadcrumb() {
-    $separator = ' > ';
-    $home_title = 'Home';
-    echo '<nav class="nsc-breadcrumb">';
-    echo '<a href="' . get_home_url() . '">' . $home_title . '</a>' . $separator;
-    if (is_category() || is_single()) {
-			$post_categories = get_the_category();
-			if ( ! empty( $post_categories ) ) {
-			    $first_category = $post_categories[0];
-			    echo esc_html( $first_category->name );
-			}
-        if (is_single()) {
-            echo $separator;
-            the_title();
-        }
-    }
-		echo '</nav>';
+function nsc_blog_breadcrumb() { 
+    $bg_image = get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>
+        <div
+        id="hero"
+        class="hero jarallax"
+        data-speed="0.6"
+        data-img-position="50% 48%"
+        style="background-image: url(<?php echo $bg_image; ?>);background-position: 15% center;background-color: #2d69b9">
+
+        <div class="hero__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11 col-sm-12">
+                        <h4 class="hero__subtitle"><a href="<?php get_home_url() ?>">Home</a></h4>
+                        <h1 class="hero__title"><?php the_title(); ?></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php 
 }
 
 

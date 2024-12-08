@@ -640,13 +640,474 @@ function nsc_blog_customizer_register( $wp_customize ){
             'section'=> 'rj_leo_bst_faq_section',
             'type'=> 'text'
         ));
-
-     
-
     }
 
+    // about us page START
+    $wp_customize->add_section('rj_leo_bst_about_us_page' , array(
+        'title' => __( 'About us page', 'rj-bst' ),
+        'panel' => 'rj_leo_bst_homepage_panel'
+    ) );
 
+    $wp_customize->add_setting( 'rj_leo_bst_aboutus_page_sec1_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_aboutus_page_sec1_separator',array(
+        'label' => esc_html__( 'Section one', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec1_subhead',array(
+        'default'=> 'About BST',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec1_subhead',array(
+        'label'	=> esc_html__('Subtitle','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec1_title',array(
+        'default'=> 'Where Innovation Meets Convenience',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec1_title',array(
+        'label'	=> esc_html__('Title','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
     
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec1_desc',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec1_desc',array(
+        'label'	=> esc_html__('Paragraph','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'textarea'
+    )); 
+
+
+    $wp_customize->add_setting( 'rj_leo_bst_aboutus_page_sec2_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_aboutus_page_sec2_separator',array(
+        'label' => esc_html__( 'Section Two', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec2_title',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec2_title',array(
+        'label'	=> esc_html__('Title','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting( 'rj_leo_bst_about_us_page_sec2_leftpara_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_about_us_page_sec2_leftpara_separator',array(
+        'label' => esc_html__( 'Left Paragraph', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec2_leftpara_num',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec2_leftpara_num',array(
+        'label'	=> esc_html__('Left Para Number','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'number'
+    )); 
+    
+    $sec2_left_para = get_theme_mod('rj_leo_bst_about_us_page_sec2_leftpara_num');
+    for ($i=1; $i <= $sec2_left_para ; $i++) { 
+        $wp_customize->add_setting('rj_leo_bst_about_us_page_sec2_leftpara'.$i,array(
+            'default'=> '',
+            'sanitize_callback'	=> 'sanitize_text_field'
+        ));
+        $wp_customize->add_control('rj_leo_bst_about_us_page_sec2_leftpara'.$i,array(
+            'label'	=> esc_html__('Para '.$i,'rj-bst'),
+            'section'=> 'rj_leo_bst_about_us_page',
+            'type'=> 'textarea'
+        )); 
+    }
+    
+
+    $wp_customize->add_setting( 'rj_leo_bst_about_us_page_sec2_rightpara_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_about_us_page_sec2_rightpara_separator',array(
+        'label' => esc_html__( 'Right Paragraph', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+
+    $wp_customize->add_setting('rj_leo_bst_about_us_page_sec2_rightpara_num',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_about_us_page_sec2_rightpara_num',array(
+        'label'	=> esc_html__('Right Para Number','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'number'
+    )); 
+    
+    $sec2_left_para = get_theme_mod('rj_leo_bst_about_us_page_sec2_rightpara_num');
+    for ($i=1; $i <= $sec2_left_para ; $i++) { 
+        $wp_customize->add_setting('rj_leo_bst_about_us_page_sec2_rightpara'.$i,array(
+            'default'=> '',
+            'sanitize_callback'	=> 'sanitize_text_field'
+        ));
+        $wp_customize->add_control('rj_leo_bst_about_us_page_sec2_rightpara'.$i,array(
+            'label'	=> esc_html__('Para '.$i,'rj-bst'),
+            'section'=> 'rj_leo_bst_about_us_page',
+            'type'=> 'textarea'
+        )); 
+    }
+
+    $wp_customize->add_setting( 'rj_leo_bst_team_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_team_separator',array(
+        'label' => esc_html__( 'Team Section', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+
+    $wp_customize->add_setting('rj_leo_bst_team_subtitle',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_team_subtitle',array(
+        'label'	=> esc_html__('Subheading','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_team_title',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_team_title',array(
+        'label'	=> esc_html__('Heading','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_team_desc',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_team_desc',array(
+        'label'	=> esc_html__('Description','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'textarea'
+    )); 
+
+    $wp_customize->add_setting( 'rj_leo_bst_timeline_separator',array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+    ));
+    $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_timeline_separator',array(
+        'label' => esc_html__( 'Timeline Section', 'rj-bst' ),
+        'section' => 'rj_leo_bst_about_us_page'
+    )));
+
+    $wp_customize->add_setting('rj_leo_bst_timeline_subtitle',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_timeline_subtitle',array(
+        'label'	=> esc_html__('Subheading','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_timeline_title',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_timeline_title',array(
+        'label'	=> esc_html__('Heading','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_timeline_number',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('rj_leo_bst_timeline_number',array(
+        'label'	=> esc_html__('Number of time to show','rj-bst'),
+        'section'=> 'rj_leo_bst_about_us_page',
+        'type'=> 'number'
+    )); 
+
+    $timeline_number = get_theme_mod('rj_leo_bst_timeline_number');
+
+    for ($i=0; $i < $timeline_number ; $i++) { 
+        $wp_customize->add_setting( 'rj_leo_bst_timeline_separator'.$i,array(
+            'default' => '',
+            'transport' => 'refresh',
+            'sanitize_callback' => 'nsc_blog_toggle_sanitization'
+        ));
+        $wp_customize->add_control( new NSC_BLOG_SEPARATOR( $wp_customize, 'rj_leo_bst_timeline_separator'.$i,array(
+            'label' => esc_html__( 'Timeline '.$i, 'rj-bst' ),
+            'section' => 'rj_leo_bst_about_us_page'
+        )));
+
+        $wp_customize->add_setting('rj_leo_bst_timeline_year'.$i,array(
+            'default'=> '',
+            'sanitize_callback'	=> 'sanitize_text_field'
+        ));
+    
+        $wp_customize->add_control('rj_leo_bst_timeline_year'.$i,array(
+            'label'	=> esc_html__('Year','rj-bst'),
+            'section'=> 'rj_leo_bst_about_us_page',
+            'type'=> 'text'
+        )); 
+        $wp_customize->add_setting('rj_leo_bst_timeline_desc'.$i,array(
+            'default'=> '',
+            'sanitize_callback'	=> 'sanitize_text_field'
+        ));
+    
+        $wp_customize->add_control('rj_leo_bst_timeline_desc'.$i,array(
+            'label'	=> esc_html__('Description','rj-bst'),
+            'section'=> 'rj_leo_bst_about_us_page',
+            'type'=> 'textarea'
+        )); 
+    }
+    // about us page END
+    //  common section
+    $wp_customize->add_section('rj_leo_bst_common_section' , array(
+        'title' => __( 'Footer Common Section', 'rj-bst' ),
+        'panel' => 'rj_leo_bst_homepage_panel'
+    ) );
+
+    $wp_customize->add_setting('rj_leo_bst_common_title',array(
+        'default'=> 'Let’s Create Something Extraordinary',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_title',array(
+        'label'	=> esc_html__('Heading','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_common_description',array(
+        'default'=> 'Blue Sky Tree is ready to bring your vision to life with intelligent vending and automation solutions. Partner with us today and redefine convenience for your customers.',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_description',array(
+        'label'	=> esc_html__('Heading','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'textarea'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_common_contact_head',array(
+        'default'=> 'Contact Us Now',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_contact_head',array(
+        'label'	=> esc_html__('Contact Us Title','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+    
+    $wp_customize->add_setting('rj_leo_bst_common_contact_no1',array(
+        'default'=> '+65 9070 7168',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_contact_no1',array(
+        'label'	=> esc_html__('Number 1','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+    
+    $wp_customize->add_setting('rj_leo_bst_common_contact_no2',array(
+        'default'=> '+65 9040 1166',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_contact_no2',array(
+        'label'	=> esc_html__('Number 2','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_common_contact_email',array(
+        'default'=> 'blueskytree1@gmail.com',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_contact_email',array(
+        'label'	=> esc_html__('Email','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_common_button_text',array(
+        'default'=> 'Get In Touch',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_button_text',array(
+        'label'	=> esc_html__('Button Text','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_common_button_url',array(
+        'default'=> '#',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_common_button_url',array(
+        'label'	=> esc_html__('Button Url','rj-bst'),
+        'section'=> 'rj_leo_bst_common_section',
+        'type'=> 'text'
+    )); 
+    
+    // contact us page
+    $wp_customize->add_section('rj_leo_bst_contact_us_page_section' , array(
+        'title' => __( 'Contact Us Page', 'rj-bst' ),
+        'panel' => 'rj_leo_bst_homepage_panel'
+    ) );
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_location_label',array(
+        'default'=> 'Location',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_location_label',array(
+        'label'	=> esc_html__('Location Label','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+    $wp_customize->add_setting('rj_leo_bst_contact_us_location',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_location',array(
+        'label'	=> esc_html__('Location','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'textarea'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_phone_label',array(
+        'default'=> 'Location',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_phone_label',array(
+        'label'	=> esc_html__('Phone Label','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+    $wp_customize->add_setting('rj_leo_bst_contact_us_phone',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_phone',array(
+        'label'	=> esc_html__('Phone Number','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_email_label',array(
+        'default'=> 'Location',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_email_label',array(
+        'label'	=> esc_html__('Email Label','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+    $wp_customize->add_setting('rj_leo_bst_contact_us_email',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_email',array(
+        'label'	=> esc_html__('Email Address','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_facebook_url',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_facebook_url',array(
+        'label'	=> esc_html__('Facebook Url','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_twitter_url',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_twitter_url',array(
+        'label'	=> esc_html__('Twitter Url','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_youtube_url',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_youtube_url',array(
+        'label'	=> esc_html__('You Tube Url','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+
+    $wp_customize->add_setting('rj_leo_bst_contact_us_instagram_url',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_instagram_url',array(
+        'label'	=> esc_html__('Instagram Url','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+   
+    $wp_customize->add_setting('rj_leo_bst_contact_us_form_head',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_form_head',array(
+        'label'	=> esc_html__('Form Head','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
+   
+    $wp_customize->add_setting('rj_leo_bst_contact_us_form_shortcode',array(
+        'default'=> '',
+        'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('rj_leo_bst_contact_us_form_shortcode',array(
+        'label'	=> esc_html__('Form Shortcode','rj-bst'),
+        'section'=> 'rj_leo_bst_contact_us_page_section',
+        'type'=> 'text'
+    )); 
 
 
 

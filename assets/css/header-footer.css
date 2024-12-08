@@ -9097,7 +9097,7 @@ form button[type=submit], .wpcf7-form input[type=submit] {
 .form--horizontal button[type=submit] {
   margin-top: 0
 }
-.form-subscribe .textfield, .wpcf7-form input, .wpcf7-form textarea {
+.form-subscribe .textfield{
   color: #fff;
   border-color: rgba(255,255,255,.5)
 }
