@@ -191,89 +191,6 @@ echo nsc_blog_breadcrumb();
                             </div>
                             <!-- end widget -->
 
-                            <!-- start widget -->
-                            <div class="widget widget--instagram">
-                                <h4 class="widget-title"><i class="fontello-instagram"></i># VendGo</h4>
-
-                                <!-- start instafeed -->
-                                <div class="instafeed">
-                                    <div class="row">
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/3.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/4.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/2.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/1.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/5.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-
-                                        <!-- start item -->
-                                        <div class="col-4 col-sm-3 col-md-4">
-                                            <div class="__item">
-                                                <figure class="__image">
-                                                    <img class="lazy" src="img/blank.gif" data-src="img/instafeed_img/6.jpg" alt="demo" />
-
-                                                    <a href="javascript:void(0);"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <!-- end item -->
-                                    </div>
-                                </div>
-                                <!-- end instafeed -->
-                            </div>
-                            <!-- end widget -->
                         </aside>
                         <!-- end sidebar -->
 
@@ -387,7 +304,7 @@ echo nsc_blog_breadcrumb();
 
                                     <!-- start item -->
                                     <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-4 d-sm-flex">
-                                        <div class="__item __item--preview __item--shadow" style="background: #f95a3f">
+                                        <div class="__item __item--preview __item--shadow" style="background: #1b7a94">
                                             <div class="__body">
                                                 <div class="__content">
                                                     <h5 class="__category"><a class="text-white" href="#">Business</a></h5>
@@ -588,7 +505,7 @@ echo nsc_blog_breadcrumb();
 
                                     <!-- start item -->
                                     <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-4 d-sm-flex">
-                                        <div class="__item __item--preview __item--shadow" style="background: #f95a3f">
+                                        <div class="__item __item--preview __item--shadow" style="background: #1b7a94">
                                             <div class="__body">
                                                 <div class="__content">
                                                     <h5 class="__category"><a class="text-white" href="#">Business</a></h5>

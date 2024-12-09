@@ -18,306 +18,7 @@ echo nsc_blog_breadcrumb();
 				================================================== -->
 				<link rel="stylesheet" href="css/style.min.css" type="text/css">
 
-				<!-- start section -->
-				<section class="section section--no-pb">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-md-6 col-lg-4 col-xl-3">
-								<div class="section-heading">
-									<h5 class="__subtitle">Main products</h5>
-
-									<h2 class="__title">Coffe Machines <span>Rental Service</span></h2>
-								</div>
-
-								<div class="spacer py-3"></div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12 col-lg-7 col-xl-6">
-
-								<div class="content-container">
-									<p>
-										<strong>Zebra tilapia ocean perch ocean sunfish bichir. Monkfish eel soapfish sabertooth fish whiptail gulper long-finned char hussar.</strong> Pacific hake yellowfin pike mud cat sand goby, mahseer round whitefish. Platyfish eelpout, blue danio Alaska blackfish dhufish sheepshead minnow warty angler ghost fish bamboo shark
-									</p>
-
-									<p>
-										Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth tetra barreleye springfish chubsucker Pacific hake sea devil New Zealand smelt grunt Redfin perch rock beauty snake mudhead: boafish rock bass pompano dolphinfish. Pineconefish ribbonbearer climbing perch tenpounder emperor bream, labyrinth fish half-gill four-eyed fish Atlantic silverside Gianttail mud catfish albacore featherback loach goby leatherjacket shortnose chimaera. 
-									</p>
-								</div>
-
-							</div>
-
-							<div class="col-12 col-lg-5 col-xl-6  text-lg-right">
-
-								<div class="spacer py-4 d-lg-none"></div>
-
-								<img class="lazy" src="img/blank.gif" data-src="img/coffe_machine.jpg" width="435" height="318" alt="demo" />
-
-							</div>
-						</div>
-
-						<div class="spacer py-9"></div>
-
-						<div class="row">
-							<div class="col-12">
-
-								<!-- start brands list -->
-								<div class="brands-list">
-									<div class="__inner">
-										<div class="row justify-content-sm-around align-items-center">
-											<!-- start item -->
-											<div class="col-6 col-sm-auto">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/brands_img/5.png" width="126" height="64" alt="demo" />
-													</figure>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-6 col-sm-auto">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/brands_img/4.png" width="100" height="89" alt="demo" />
-													</figure>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-6 col-sm-auto">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/brands_img/3.png" width="127" height="60" alt="demo" />
-													</figure>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-6 col-sm-auto">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/brands_img/2.png" width="132" height="47" alt="demo" />
-													</figure>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-6 col-sm-auto">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/brands_img/1.png" width="120" height="78" alt="demo" />
-													</figure>
-												</div>
-											</div>
-											<!-- end item -->
-										</div>
-									</div>
-								</div>
-								<!-- end brands list -->
-
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end section -->
-
-				<!-- start section -->
-				<section class="section section--no-pb">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-12">
-
-								<!-- start products cards -->
-								<div class="products-cards">
-									<div class="__inner">
-										<div class="row">
-											<!-- start item -->
-											<div class="col-12 col-md-6 col-lg-4">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/products-cards_img/1.jpg" alt="demo" />
-													</figure>
-
-													<div class="__content">
-														<h4 class="__title text-white">Vending Machines</h4>
-													</div>
-
-													<a class="__link" href="#"></a>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-12 col-md-6 col-lg-4">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/products-cards_img/2.jpg" alt="demo" />
-													</figure>
-
-													<div class="__content">
-														<h4 class="__title text-white">Coffe Machines</h4>
-													</div>
-
-													<a class="__link" href="#"></a>
-												</div>
-											</div>
-											<!-- end item -->
-
-											<!-- start item -->
-											<div class="col-12 col-md-6 col-lg-4">
-												<div class="__item">
-													<figure class="__image">
-														<img class="lazy" src="img/blank.gif" data-src="img/products-cards_img/3.jpg" alt="demo" />
-													</figure>
-
-													<div class="__content">
-														<h4 class="__title text-white">Ingredients & Snacks</h4>
-													</div>
-
-													<a class="__link" href="#"></a>
-												</div>
-											</div>
-											<!-- end item -->
-										</div>
-									</div>
-								</div>
-								<!-- end products cards -->
-
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end section -->
-
-				<!-- start section -->
-				<section class="section section--no-pb">
-					<div class="decor-el decor-el--1">
-						<div data-jarallax-element="-140" data-speed="0.4">
-							<img class="lazy" width="172" height="453" src="img/blank.gif" data-src="img/decor-el_1.png" alt="demo"/>
-						</div>
-					</div>
-
-					<div class="container">
-						<div class="row align-items-lg-center">
-							<div class="col-12 col-lg-6 text-center text-lg-left">
-								<img class="lazy" src="img/blank.gif" data-src="img/img_1.png" width="563" height="568" alt="demo">
-							</div>
-
-							<div class="spacer py-4 d-lg-none"></div>
-
-							<div class="col-12 col-lg-6">
-								<div class="content-container">
-									<div class="h2" style="margin-bottom: -10px; color: #f18226;line-height: 1">.01</div>
-
-									<h2>Awesome Products by VendGo</h2>
-
-									<p>
-										Pacific hake sea devil New Zealand smelt grunt Redfin perch rock beauty snake mudhead: boafish rock bass pompano dolphinfish. Pineconefish ribbonbearer climbing perch tenpounder . Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. 
-									</p>
-
-									<div class="spacer py-1"></div>
-
-									<ul class="check-list">
-										<li><i class="ico-checked fontello-ok"></i><strong>Machine Installation</strong></li>
-										<li><i class="ico-checked fontello-ok"></i><strong>Eco Vending</strong></li>
-										<li><i class="ico-checked fontello-ok"></i><strong>Quick Delivery</strong></li>
-									</ul>
-
-									<div class="spacer py-2"></div>
-
-									<p>
-										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Get Free Vending Machine</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end section -->
-
-				<!-- start section -->
-				<section class="section">
-					<div class="decor-el decor-el--2">
-						<div data-jarallax-element="-140" data-speed="0.4">
-							<img class="lazy" width="185" height="544" src="img/blank.gif" data-src="img/decor-el_2.png" alt="demo"/>
-						</div>
-					</div>
-
-					<div class="container">
-						<div class="row flex-lg-row-reverse">
-							<div class="col-12 col-lg-6 text-center text-lg-left">
-								<img class="lazy" src="img/blank.gif" data-src="img/img_2.png" width="566" height="563" alt="demo">
-							</div>
-
-							<div class="spacer py-4 d-lg-none"></div>
-
-							<div class="col-12 col-lg-6">
-								<div class="content-container">
-									<div class="h2" style="margin-bottom: -10px; color: #f95a3f;line-height: 1">.02</div>
-
-									<h2>VendGo Ingredients</h2>
-
-									<p>
-										Pacific hake sea devil New Zealand smelt grunt Redfin perch rock beauty snake mudhead: boafish rock bass pompano dolphinfish. Pineconefish ribbonbearer climbing perch tenpounder . Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish.
-									</p>
-
-									<p>
-										<strong>Ingredients</strong>
-									</p>
-
-									<p>
-										<img class="lazy" src="img/blank.gif" data-src="img/img_ingredients.png" width="361" height="81" alt="demo">
-									</p>
-
-									<div class="spacer py-1"></div>
-
-									<p>
-										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Get Free Vending Machine</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end section -->
-
-				<!-- start section -->
-				<section class="section section--bg-gray-2 section--bg-img jarallax" data-speed="0.3" data-img-position="50% 60%" style="background-image: url(img/bg_3.jpg);">
-					<div class="container">
-						<div class="row align-items-lg-center">
-							<div class="col-12 col-lg-6 text-center text-lg-left">
-								<img class="lazy" src="img/blank.gif" data-src="img/img_3.png" width="443" height="439" alt="demo">
-							</div>
-
-							<div class="spacer py-4 d-lg-none"></div>
-
-							<div class="col-12 col-lg-6">
-								<div class="content-container">
-									<div class="h2" style="margin-bottom: -10px; color: #f18226;line-height: 1">.03</div>
-
-									<h2>Non-GMO and Gluten-Free Vending Machine Snacks</h2>
-
-									<p>
-										Pacific hake sea devil New Zealand smelt grunt Redfin perch rock beauty snake mudhead: boafish rock bass pompano dolphinfish. Pineconefish ribbonbearer climbing perch tenpounder . Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. 
-									</p>
-
-									<ul class="check-list mt-md-6">
-										<li><i class="ico-checked fontello-ok"></i><strong>Healthy Potato Chips</strong></li>
-										<li><i class="ico-checked fontello-ok"></i><strong>Healthy Energy Bars</strong></li>
-										<li><i class="ico-checked fontello-ok"></i><strong>Gluten-Free Snacks</strong></li>
-										<li><i class="ico-checked fontello-ok"></i><strong>Kosher Snacks</strong></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end section -->
+				
 
 				<!-- start section -->
 				<section class="section">
@@ -325,10 +26,13 @@ echo nsc_blog_breadcrumb();
 						<div class="row">
 							<div class="col-12 col-md">
 								<div class="section-heading section-heading--left">
-									<h5 class="__subtitle">Best match</h5>
+									<h5 class="__subtitle">Our Products</h5>
 
-									<h2 class="__title">Vend<span>GO</span> Featured Products</h2>
+									<h2 class="__title">Innovative Vending & Automation Solutions</h2>
 								</div>
+
+								<p>At Blue Sky Tree, we take convenience to the next level with our state-of-the-art vending and robotic solutions. Each product is designed to meet the demands of modern businesses, combining cutting-edge technology with sleek design to deliver exceptional user experiences. Explore our range of smart machines that redefine convenience, efficiency, and innovation.
+</p>
 							</div>
 
 							<div class="col-12 col-lg-auto">
@@ -339,269 +43,239 @@ echo nsc_blog_breadcrumb();
 						<div class="spacer py-3 py-lg-6"></div>
 					</div>
 
-					<!-- start goods -->
-					<div class="goods goods--slider">
-						<div class="slider-special-layout">
-							<div class="slider-special-layout__inner">
-								<div class="slider-special-layout__container">
-
-									<div class="js-slick disable-not-active"
-										data-slick='{
-											"autoplay": true,
-											"dots": true,
-											"speed": 1200,
-											"appendDots": "#slick-dots--container-2",
-											"responsive": [
-											{
-												"breakpoint": 575,
-												"settings":{
-													"slidesToShow": 2,
-													"slidesToScroll": 2
-												}
-											},
-											{
-												"breakpoint": 767,
-												"settings":{
-													"slidesToShow": 3,
-													"slidesToScroll": 3
-												}
-											},
-											{
-												"breakpoint": 991,
-												"settings":{
-													"slidesToShow": 4,
-													"slidesToScroll": 2
-												}
-											},
-											{
-												"breakpoint": 1199,
-												"settings":{
-													"slidesToShow": 4,
-													"slidesToScroll": 2
-												}
-											}]
-										}'>
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/1.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">1 500$</span>
-													<span class="product-price__item product-price__item--old">2200$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Combo Machine TB 100</a></h4>
-											</div>
-
-											<span class="product-label product-label--discount">Sale</span>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/2.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">2 250$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Snack Machine Claus 1</a></h4>
-											</div>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/3.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">1 150$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Coffe Machine CF96</a></h4>
-											</div>
-
-											<span class="product-label product-label--new">New</span>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/4.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">3 500$</span>
-													<span class="product-price__item product-price__item--old">4200$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Water Machine WM 2500</a></h4>
-											</div>
-
-											<span class="product-label product-label--discount">Sale</span>
-										</div>
-										<!-- end item -->
-
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/1.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">1 500$</span>
-													<span class="product-price__item product-price__item--old">2200$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Combo Machine TB 100</a></h4>
-											</div>
-
-											<span class="product-label product-label--discount">Sale</span>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/2.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">2 250$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Snack Machine Claus 1</a></h4>
-											</div>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/3.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">1 150$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Coffe Machine CF96</a></h4>
-											</div>
-
-											<span class="product-label product-label--new">New</span>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="__item">
-											<figure class="__image __image--bg-gray">
-												<img src="img/goods_img/4.jpg" alt="demo" />
-
-												<div class="__btn">
-													<a class="custom-btn custom-btn--medium custom-btn--s3 wide" href="#">Add to Cart</a>
-												</div>
-											</figure>
-
-											<div class="__content">
-												<div class="product-price">
-													<span class="product-price__item product-price__item--new">3 500$</span>
-													<span class="product-price__item product-price__item--old">4200$</span>
-												</div>
-
-												<h4 class="__title"><a href="#">Water Machine WM 2500</a></h4>
-											</div>
-
-											<span class="product-label product-label--discount">Sale</span>
-										</div>
-										<!-- end item -->
-									</div>
-
-								</div>
-							</div>
+				<!-- product 1 section -->
+				<section class="section section--bg-gray-2 section--bg-img jarallax">
+					<!-- <div class="decor-el decor-el--1">
+						<div data-jarallax-element="-140" data-speed="0.4">
+							<img class="lazy1" width="172" height="453" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" alt="demo"/>
 						</div>
-					</div>
-					<!-- end goods -->
-				</section>
-				<!-- end section -->
+					</div> -->
 
-				<!-- start section -->
-				<section class="section section--bg-img jarallax" data-speed="0.3" data-img-position="50% 60%" style="background-image: url(img/bg_4.jpg);background-color: #f95a3f;">
 					<div class="container">
-						<div class="row justify-content-md-center">
-							<div class="col-12 col-md-10 col-lg-8 col-xl-6">
-								<div class="section-heading section-heading--white section-heading--center">
-									<h5 class="__subtitle">Main products</h5>
+						<div class="row align-items-lg-center">
+							<div class="col-12 col-lg-6 text-center text-lg-left">
+								<img class="lazy1" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" width="563" height="568" alt="demo">
+							</div>
 
-									<h2 class="__title">Get in Touch</h2>
+							<div class="spacer py-4 d-lg-none"></div>
+
+							<div class="col-12 col-lg-6">
+								<div class="content-container">
+									<div class="h2" style="margin-bottom: -10px; color: #1b7a94;line-height: 1">.01</div>
+
+									<h2>Ice Cream Vending Machine</h2>
+
+									<p>
+									A Sweet Treat Anytime, Anywhere <br />
+									Delight customers with premium ice cream at the touch of a button. Our ice cream vending machines feature advanced refrigeration, ensuring perfect temperature and freshness every time. With customizable branding options and cashless payment systems, these machines are ideal for malls, schools, and workplaces.
+
+									</p>
+
+									<div class="spacer py-1"></div>
+
+									<ul class="check-list">
+										<li><i class="ico-checked fontello-ok"></i><strong>Reliable cooling for all weather conditions</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Supports multiple ice cream brands and configurations</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Engaging digital screens for advertising opportunities</strong></li>
+									</ul>
+
+									<div class="spacer py-2"></div>
+
+									<p>
+										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Get Your Ice Cream Machine ➜</a>
+									</p>
 								</div>
-
-								<div class="spacer py-6"></div>
-
-								<form class="form-subscribe js-contact-form" action="#">
-									<div class="input-wrp">
-										<input class="textfield" placeholder="Name" name="name" type="text" />
-									</div>
-
-									<div class="input-wrp">
-										<input class="textfield" placeholder="Email" name="email" type="text" inputmode="email" x-inputmode="email" />
-									</div>
-
-									<label class="input-wrp">
-										<textarea class="textfield" placeholder="Message" name="message"></textarea>
-									</label>
-
-									<button class="custom-btn custom-btn--big custom-btn--s4 wide" type="submit" role="button">Subscribe</button>
-
-									<div class="form__note"></div>
-								</form>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- end section -->
+
+				<!-- product 2 section -->
+				<section class="section">
+					<!-- <div class="decor-el decor-el--2">
+						<div data-jarallax-element="-140" data-speed="0.4">
+							<img class="lazy" width="185" height="544" src="img/blank.gif" data-src="img/decor-el_2.png" alt="demo"/>
+						</div>
+					</div> -->
+
+					<div class="container">
+						<div class="row flex-lg-row-reverse">
+							<div class="col-12 col-lg-6 text-center text-lg-left">
+							<img class="lazy1" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" width="563" height="568" alt="demo">
+							</div>
+
+							<div class="spacer py-4 d-lg-none"></div>
+
+							<div class="col-12 col-lg-6">
+								<div class="content-container">
+									<div class="h2" style="margin-bottom: -10px; color: #1b7a94;line-height: 1">.02</div>
+
+									<h2>Cake Vending Machine</h2>
+
+									<p>
+									Celebrate Every Occasion, On-Demand <br />
+									Revolutionize dessert delivery with our cake vending machine, capable of dispensing whole cakes with precision. Perfect for bakeries, retail spaces, and events, this machine offers convenience without compromising quality.
+									</p>
+
+									<div class="spacer py-1"></div>
+
+									<ul class="check-list">
+										<li><i class="ico-checked fontello-ok"></i><strong>Temperature-controlled to maintain freshness</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Spacious compartments for whole cakes of various sizes</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Sleek design with advertising-enabled touchscreens</strong></li>
+									</ul>
+
+									<p>
+										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Learn More About Cake Vending ➜</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end section -->
+
+				<!-- product 3 section -->
+				<section class="section section--bg-gray-2 section--bg-img jarallax" data-speed="0.3" data-img-position="50% 60%" style="background-image: url(img/bg_3.jpg);">
+					<div class="container">
+						<div class="row align-items-lg-center">
+							<div class="col-12 col-lg-6 text-center text-lg-left">
+							<img class="lazy1" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" width="563" height="568" alt="demo">
+							</div>
+
+							<div class="spacer py-4 d-lg-none"></div>
+
+							<div class="col-12 col-lg-6">
+								<div class="content-container">
+									<div class="h2" style="margin-bottom: -10px; color: #1b7a94;line-height: 1">.03</div>
+
+									<h2>Hot Food Vending Machine</h2>
+
+									<p>
+									Restaurant-Quality Meals Anytime <br />
+									Serve hot, delicious meals with our industry-leading hot food vending machines. From hearty noodles to local favorites, these machines offer unparalleled convenience for customers on the go.
+
+									</p>
+
+									<ul class="check-list mt-md-6">
+										<li><i class="ico-checked fontello-ok"></i><strong>Food-grade construction for safety and hygiene</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Cashless payment and real-time inventory monitoring</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>LCD advertising screen to engage users</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Kosher Snacks</strong></li>
+									</ul>
+
+									<p>
+										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Discover Hot Food Solutions ➜</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end section -->
+
+				<!-- product 4 section -->
+				<section class="section">
+					<!-- <div class="decor-el decor-el--2">
+						<div data-jarallax-element="-140" data-speed="0.4">
+							<img class="lazy" width="185" height="544" src="img/blank.gif" data-src="img/decor-el_2.png" alt="demo"/>
+						</div>
+					</div> -->
+
+					<div class="container">
+						<div class="row flex-lg-row-reverse">
+							<div class="col-12 col-lg-6 text-center text-lg-left">
+							<img class="lazy1" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" width="563" height="568" alt="demo">
+							</div>
+
+							<div class="spacer py-4 d-lg-none"></div>
+
+							<div class="col-12 col-lg-6">
+								<div class="content-container">
+									<div class="h2" style="margin-bottom: -10px; color: #1b7a94;line-height: 1">.04</div>
+
+									<h2>Bring-Your-Own-Bottle Detergent Vending Machine</h2>
+
+									<p>
+									Sustainable Solutions for a Greener Tomorrow <br />
+									Encourage eco-conscious living with our detergent vending machine. Customers can refill their own bottles with high-quality liquid detergents, reducing waste and promoting sustainability.
+
+									</p>
+
+									<div class="spacer py-1"></div>
+
+									<ul class="check-list">
+										<li><i class="ico-checked fontello-ok"></i><strong>Dispenses up to four types of detergents</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>32” touchscreen for interactive instructions and ads</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Perfect for eco-friendly stores and community spaces</strong></li>
+									</ul>
+
+									<p>
+										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Join the Sustainability Movement ➜</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end section -->
+
+				<!-- product 5 section -->
+				<section class="section section--bg-gray-2 section--bg-img jarallax" data-speed="0.3" data-img-position="50% 60%" style="background-image: url(img/bg_3.jpg);">
+					<div class="container">
+						<div class="row align-items-lg-center">
+							<div class="col-12 col-lg-6 text-center text-lg-left">
+							<img class="lazy1" src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" data-src="https://bst.midnightpoha.com/wp-content/uploads/2024/12/img_1.png" width="563" height="568" alt="demo">
+							</div>
+
+							<div class="spacer py-4 d-lg-none"></div>
+
+							<div class="col-12 col-lg-6">
+								<div class="content-container">
+									<div class="h2" style="margin-bottom: -10px; color: #1b7a94;line-height: 1">.05</div>
+
+									<h2>Robotic Barista</h2>
+
+									<p>
+									Crafted Perfection, Every Cup <br />
+									Enhance your café or office space with our robotic barista, capable of preparing barista-quality beverages with precision and flair. From lattes to cappuccinos, this machine offers consistency and efficiency like never before.
+									</p>
+
+									<ul class="check-list mt-md-6">
+										<li><i class="ico-checked fontello-ok"></i><strong>AI-powered technology for customization</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Compact design suitable for various environments</strong></li>
+										<li><i class="ico-checked fontello-ok"></i><strong>Stunning customer engagement with real-time animations</strong></li>
+									</ul>
+
+									<p>
+										<a class="custom-btn custom-btn--big custom-btn--s1" href="#">Meet Your Robotic Barista ➜</a>
+									</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end section -->
+
+				<section class="section section--no-pb">
+					<div class="container">
+						<div class="section-heading">
+							<h2 class="__title">Why Choose Blue Sky Tree Products?</span></h2>
+						</div>
+
+						<ul class="check-list mt-md-6">
+							<li><i class="ico-checked fontello-ok"></i><strong>Innovative Design: Cutting-edge technology that meets modern consumer needs.</strong></li>
+							<li><i class="ico-checked fontello-ok"></i><strong>Reliability: Built to perform, our machines are trusted by leading businesses across industries.</strong></li>
+							<li><i class="ico-checked fontello-ok"></i><strong>Seamless Integration: Compatible with cashless payments, telemetry systems, and advanced inventory management.</strong></li>
+						</ul>
+
+						<p class="text-center pt-4">Transform Your Space with Smart Vending Solutions Blue Sky Tree’s vending and robotic solutions bring innovation to your business while delivering convenience to your customers. From retail spaces to offices, we’ve got you covered.
+</p>
+					</div>
+				</section>
+
 			</main>
 			<!-- end main -->
 				

@@ -262,7 +262,7 @@ h1,h2,h3,h4,h5,h6{
   opacity: .7;
 }
 .events-grid .__item:hover .__content {
-  background-color: #f95a3f;
+  background-color: #1b7a94;
 }
 .events-grid .__item:hover .__link {
   opacity: 1;
@@ -271,6 +271,9 @@ h1,h2,h3,h4,h5,h6{
   -webkit-transition-delay: .1s;
   -o-transition-delay: .1s;
   transition-delay: .1s;
+}
+.events-grid  .__title, .events-grid .__link{
+  color: #fff;
 }
 .leo-timeline{
   display: grid;
@@ -363,9 +366,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .team .__image{
   backface-visibility: hidden;
-
 }
-
+.about-img.text-right img{
+  object-fit: cover;
+}
 
 @media screen and (max-width: 1800px) {
     .about-img {

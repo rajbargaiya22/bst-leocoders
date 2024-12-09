@@ -5,7 +5,7 @@
  * @package rj-bst
  */
 ?>
-<section class="section">
+<section class="section section--no-pb">
     <div class="container">
         <div class="section-heading section-heading--center">
             <h5 class="__subtitle"><?php echo esc_html(get_theme_mod('rj_leo_bst_timeline_subtitle', 'Timeline')); ?></h5>

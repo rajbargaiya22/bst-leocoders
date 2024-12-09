@@ -12,24 +12,24 @@
 			<div class="col-12 col-lg-7">
 				<div class="section-heading section-heading--left">
 				<h5 class="__subtitle"><?php echo esc_html(get_theme_mod('rj_leo_bst_about_subtitle')); ?></h5>
-				<h2 class="__title"><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_title')); ?></h2>
+				<h2 class="__title"><?php echo get_theme_mod('rj_leo_bst_about_title'); ?></h2>
 				</div>
 
 				<div class="spacer py-3"></div>
 
 				<div class="content-container">
-				<p><strong><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content1', 'At Blue Sky Tree, we are redefining the vending industry with cutting-edge robotics and AI-powered solutions tailored to meet the evolving needs of businesses in Singapore. From our humble beginnings in 2010 with 30 M&M vending machines, we’ve expanded our reach, now managing over 350 advanced vending units and operating three cafes nationwide. Our commitment to innovation has made us a trusted partner for leading brands, delivering convenience, efficiency, and seamless experiences.')); ?></strong></p>
+				<p><strong><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content1')); ?></strong></p>
 
-				<p><strong style="display:block"><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content2', 'Our Expertise:')); ?></strong>
-				<?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content3', 'For over a decade, Blue Sky Tree has been at the forefront of the F&B and vending industry. We are an authorized distributor for Bicom Asia’s top-tier hot food vending machines and have successfully partnered with brands like Haagen-Dazs, Chef-In-Box, and BreadTalk. Our projects span from setting up vending cafés in corporate offices to deploying smart lockers and AI robots in public spaces. With a global network of partners and stakeholders across Asia, China, Europe, and the United States, we bring a world of expertise to your doorstep.')); ?>
+				<p><strong style="display:block"><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content2')); ?></strong>
+				<?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content3')); ?>
 				</p>
-				<p><strong><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content4', 'Our dedicated team boasts extensive experience in vending machine technology and Food and Beverage (F&B) automation. We pride ourselves on delivering exceptional, round-the-clock service, ensuring that you provide a premier experience for your clients, no matter the time of day.')); ?></strong></p>
-				<p><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content5', 'Why Choose Blue Sky Tree?')); ?></p>
+				<p><strong><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content4')); ?></strong></p>
+				<p><?php echo wp_kses_post(get_theme_mod('rj_leo_bst_about_content5')); ?></p>
 					<div class="spacer"></div>
 
 					<p>
-					<a class="custom-btn custom-btn--big custom-btn--s1" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_button_url', '#')); ?>">
-                            <?php echo esc_html(get_theme_mod('rj_leo_bst_about_button_text', 'More About')); ?>
+					<a class="custom-btn custom-btn--big custom-btn--s1" href="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_button_url')); ?>">
+                            <?php echo esc_html(get_theme_mod('rj_leo_bst_about_button_text')); ?>
                         </a>
 					</p>
 
@@ -74,8 +74,8 @@
 
 				<div class="about-img text-right">
 					<img class="lazy" width="719" height="741" 
-						src="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_us_image', get_template_directory_uri() . '/assets/images/about_us_img.png')); ?>" 
-						data-src="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_us_image', get_template_directory_uri() . '/assets/images/about_us_img.png')); ?>" 
+						src="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_us_image')); ?>" 
+						data-src="<?php echo esc_url(get_theme_mod('rj_leo_bst_about_us_image')); ?>" 
 						alt="About Us">
 				</div>
 

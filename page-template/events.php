@@ -24,6 +24,7 @@ echo nsc_blog_breadcrumb();
 					<div class="container">
 						<div class="section-heading section-heading--left mb-4">
 							<h2 class="__title">Upcoming Events</h2>
+							<p>Stay connected and be part of the excitement at our upcoming events</p>
 						</div>
 					</div>
 
@@ -100,6 +101,7 @@ echo nsc_blog_breadcrumb();
 					<div class="container">
 						<div class="section-heading section-heading--left mb-4">
 							<h2 class="__title">Past Events</h2>
+							<p>Take a look at some of the highlights from our journey:</p>
 						</div>
 					</div>
 

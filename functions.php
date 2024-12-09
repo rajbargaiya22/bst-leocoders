@@ -222,7 +222,7 @@ function nsc_blog_breadcrumb() {
             <div class="container">
                 <div class="row">
                     <div class="col-11 col-sm-12">
-                        <h4 class="hero__subtitle"><a href="<?php get_home_url() ?>">Home</a></h4>
+                        <h4 class="hero__subtitle"><a href="<?php echo get_home_url() ?>">Home</a></h4>
                         <h1 class="hero__title"><?php the_title(); ?></h1>
                     </div>
                 </div>

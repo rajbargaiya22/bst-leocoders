@@ -150,26 +150,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 					slidesToShow: 1,
 					slidesToScroll: 1, 
 					appendDots: $('#slick-dots--container-0'), 
-					});
+				});
 				
-			
-				$('.brands-list').slick({
-					dots: false, 
-					arrows: false,
+				$('.product-slider').slick({
+					dots: true, 
 					autoplay: true, 
-					autoplaySpeed: 3000,
-					infinite: true, 
-					speed: 500, 
-					slidesToShow: 5,
-					slidesToScroll: 1, 
+					speed: 1200,
+					slidesToShow: 4,
+					slidesToScroll: 2,
+					appendDots: $('#slick-dots--container-2'),
 					responsive: [
 							{
-								breakpoint: 767,
-								settings: {
-									appendDots: '#start-screen__slider-nav'
+								breakpoint: 575,
+								settings:{
+									slidesToShow: 2,
+									slidesToScroll: 2
 								}
-							}
-						]
+							},
+							{
+								breakpoint: 767,
+								settings:{
+									slidesToShow: 3,
+									slidesToScroll: 3
+								}
+							},
+							{
+								breakpoint: 991,
+								settings:{
+									slidesToShow: 4,
+									slidesToScroll: 2
+								}
+							},
+							{
+								breakpoint: 1199,
+								settings:{
+									slidesToShow: 4,
+									slidesToScroll: 2
+								}
+							}]
+				});
+				
+			
+				
+					$('.brands-list').slick({
+						dots: false, 
+						arrows: false,
+						autoplay: true, 
+						autoplaySpeed: 3000,
+						infinite: true, 
+						speed: 500, 
+						slidesToShow: 5,
+						slidesToScroll: 1, 
+						responsive: [
+								{
+									breakpoint: 767,
+									settings: {
+										appendDots: '#start-screen__slider-nav'
+									}
+								}
+							]
 					});
 
 

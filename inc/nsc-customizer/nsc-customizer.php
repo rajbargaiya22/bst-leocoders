@@ -259,7 +259,7 @@ function nsc_blog_customizer_register( $wp_customize ){
         'sanitize_callback'	=> 'sanitize_text_field'
     ));
     $wp_customize->add_control('rj_leo_bst_about_title',array(
-        'label'	=> esc_html__('About Us subtitle','rj-bst'),
+        'label'	=> esc_html__('About Us Title','rj-bst'),
         'section'=> 'rj_leo_bst_about_us_section',
         'type'=> 'text'
     ));
@@ -393,6 +393,16 @@ function nsc_blog_customizer_register( $wp_customize ){
         'type'=> 'text'
     ));
     
+    $wp_customize->add_setting("rj_leo_bst_about_us_image" ,array(
+        'default'   => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,"rj_leo_bst_about_us_image" ,array(
+        'label' => __('About Us Image','rj-bst'),
+        'section' => 'rj_leo_bst_about_us_section',
+        'settings' => "rj_leo_bst_about_us_image" 
+    )));
+
     // about us END
     // key fact
     $wp_customize->add_section('rj_leo_bst_keyfact_section' , array(
@@ -670,7 +680,7 @@ function nsc_blog_customizer_register( $wp_customize ){
     )); 
 
     $wp_customize->add_setting('rj_leo_bst_about_us_page_sec1_title',array(
-        'default'=> 'Where Innovation Meets Convenience',
+        'default'=> '',
         'sanitize_callback'	=> 'sanitize_text_field'
     ));
     $wp_customize->add_control('rj_leo_bst_about_us_page_sec1_title',array(
@@ -800,16 +810,26 @@ function nsc_blog_customizer_register( $wp_customize ){
         'type'=> 'text'
     )); 
 
+    // $wp_customize->add_setting('rj_leo_bst_team_title',array(
+    //     'default'=> '',
+    //     'sanitize_callback'	=> 'sanitize_text_field'
+    // ));
+
+    // $wp_customize->add_control('rj_leo_bst_team_title',array(
+    //     'label'	=> esc_html__('Heading','rj-bst'),
+    //     'section'=> 'rj_leo_bst_about_us_page',
+    //     'type'=> 'text'
+    // )); 
+
     $wp_customize->add_setting('rj_leo_bst_team_title',array(
-        'default'=> '',
+        'default'=> 'The People Behind <span> Blue Sky Tree</span>',
         'sanitize_callback'	=> 'sanitize_text_field'
     ));
-
     $wp_customize->add_control('rj_leo_bst_team_title',array(
         'label'	=> esc_html__('Heading','rj-bst'),
         'section'=> 'rj_leo_bst_about_us_page',
         'type'=> 'text'
-    )); 
+    ));
 
     $wp_customize->add_setting('rj_leo_bst_team_desc',array(
         'default'=> '',

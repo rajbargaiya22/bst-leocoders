@@ -16,7 +16,7 @@
                     </h5>
 
                     <h2 class="__title">
-                        <?php echo get_theme_mod('rj_leo_bst_team_title', 'VendGo <span>Dream Team</span>'); ?>
+                        <?php echo get_theme_mod('rj_leo_bst_team_title'); ?>
                     </h2>
 
                     <p>
